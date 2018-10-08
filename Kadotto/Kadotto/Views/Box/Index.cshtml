@@ -1,0 +1,106 @@
+﻿@using Common.Core;
+
+@{
+    ViewBag.Title = "Index";
+    Layout = "~/Views/Shared/_LayoutAdmin.cshtml";
+}
+@section scripts
+{
+    <script src="~/Scripts/Kadotto/Box/BoxList.js"></script>
+}
+
+<p>
+   @Html.ActionLink("Create New", "Details")
+</p>
+<table class="table">
+                    <tr>
+                        <th>
+                            Name
+                        </th>
+                        <th>
+                            BoxSize
+                        </th>
+                        <th>
+                            BoxPlaceCount
+                        </th>
+                        <th>
+                            Description
+                        </th>
+                        <th>
+                            DisplayOrder
+                        </th>
+                        <th></th>
+                    </tr>
+
+                    @foreach (BoxDTO item in ViewBag.Boxes)
+                    {
+                        <tr>
+                            <td>
+                                @item.Name
+                            </td>
+                            <td>
+                                @item.BoxSize
+                            </td>
+                            <td>
+                                @item.BoxPlaceCount
+                            </td>
+                            <td>
+                                @item.Description
+                            </td>
+                            <td>
+                                @item.DisplayOrder
+                            </td>
+                            <td>
+                                <span class="glyphicon glyphicon-edit" onclick="$.Box.Edit(@item.ID)"></span> |
+                                <span class="glyphicon glyphicon-info-sign" onclick="$.Box.View(@item.ID)"></span> |
+                                <span class="glyphicon glyphicon-trash" onclick="$.Box.Delete(@item.ID)"></span>
+                            </td>
+                        </tr>
+                    }
+
+                </table>
+<div class="hidden">
+    <div class="details_fn">
+        <div class="row">
+            <div class="col-md-3">
+                <span>Name</span>
+            </div>
+            <div class="col-md-9">
+                <span class="Name"></span>
+            </div>
+        </div>
+        <div class="row">
+            <div class="col-md-3">
+                <span>BoxSize</span>
+            </div>
+            <div class="col-md-9">
+                <span class="BoxSize"></span>
+            </div>
+        </div>
+        <div class="row">
+            <div class="col-md-3">
+                <span>BoxPlaceCount</span>
+            </div>
+            <div class="col-md-9">
+                <span class="BoxPlaceCount"></span>
+            </div>
+        </div>
+        <div class="row">
+            <div class="col-md-3">
+                <span>Description</span>
+            </div>
+            <div class="col-md-9">
+                <span class="Description"></span>
+            </div>
+        </div>
+        <div class="row">
+            <div class="col-md-3">
+                <span>DisplayOrder</span>
+            </div>
+            <div class="col-md-9">
+                <span class="DisplayOrder"></span>
+            </div>
+        </div>
+    </div>
+</div>
+

@@ -1,0 +1,56 @@
+﻿@using Common.Core;
+
+@{
+    ViewBag.Title = "Product Category";
+    Layout = "~/Views/Shared/_LayoutAdmin.cshtml";
+}
+@section scripts
+{
+    <script src="~/Scripts/Kadotto/ProductCategory/ProductCategoryList.js"></script>
+}
+<p>
+    @Html.ActionLink("Create New", "Details")
+</p>
+<table class="table">
+    <tr>
+        <th>
+            Title
+        </th>
+        <th></th>
+    </tr>
+
+@foreach (ProductCategoryDTO item in ViewBag.ProductCategories) {
+    <tr>
+        <td>
+            @item.Title
+        </td>
+        <td>
+            <span class="glyphicon glyphicon-edit" onclick="$.ProductCategory.Edit(@item.ID)"></span> |
+            <span class="glyphicon glyphicon-info-sign" onclick="$.ProductCategory.View(@item.ID)"></span> |
+            <span class="glyphicon glyphicon-trash" onclick="$.ProductCategory.Delete(@item.ID)"></span>
+        </td>
+    </tr>
+}
+
+</table>
+<div class="hidden">
+    <div class="details_fn">
+        <div class="row">
+            <div class="col-md-3">
+                <span>Title</span>
+            </div>
+            <div class="col-md-9">
+                <span class="Title"></span>
+            </div>
+        </div>
+        <div class="row">
+            <div class="col-md-3">
+                <span>Parent Title</span>
+            </div>
+            <div class="col-md-9">
+                <span class="ParentTitle"></span>
+            </div>
+        </div>
+    </div>
+</div>
+

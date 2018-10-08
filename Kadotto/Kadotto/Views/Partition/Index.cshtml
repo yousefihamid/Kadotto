@@ -1,0 +1,62 @@
+﻿@using Common.Core;
+
+@{
+    ViewBag.Title = "Partition";
+    Layout = "~/Views/Shared/_LayoutAdmin.cshtml";
+}
+@section scripts
+{
+    <script src="~/Scripts/Kadotto/Partition/PartitionList.js"></script>
+}
+<p>
+    @Html.ActionLink("Create New", "Details")
+</p>
+<table class="table">
+    <tr>
+        <th>
+            Title
+        </th>
+        <th>
+            Partition Size
+        </th>
+        <th></th>
+    </tr>
+
+@foreach (PartitionDTO item in ViewBag.Partitions) {
+    <tr>
+        <td>
+            @item.Title
+        </td>
+        <td>
+            @item.PartitionSize
+        </td>
+        <td>
+            <span class="glyphicon glyphicon-edit" onclick="$.Partition.Edit(@item.ID)"></span> |
+            <span class="glyphicon glyphicon-info-sign" onclick="$.Partition.View(@item.ID)"></span> |
+            <span class="glyphicon glyphicon-trash" onclick="$.Partition.Delete(@item.ID)"></span>
+        </td>
+    </tr>
+}
+
+</table>
+<div class="hidden">
+    <div class="details_fn">
+        <div class="row">
+            <div class="col-md-3">
+                <span>Title</span>
+            </div>
+            <div class="col-md-9">
+                <span class="Title"></span>
+            </div>
+        </div>
+        <div class="row">
+            <div class="col-md-3">
+                <span>Partition Size</span>
+            </div>
+            <div class="col-md-9">
+                <span class="PartitionSize"></span>
+            </div>
+        </div>
+    </div>
+</div>
+

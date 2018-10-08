@@ -1,0 +1,62 @@
+﻿body {
+    font-family: 'Roboto', sans-serif;
+}
+
+.main_sazeh_co {
+    position: relative;
+    padding: 0;
+
+
+    .back_left_wrapper {
+        height: 100vh;
+        position: relative;
+        /*background:url(../Images/sazeh_co_ir.jpg) left top no-repeat;*/
+        background-size: contain;
+        width: 100%;
+    }
+
+    .header_co {
+        position:relative;
+        height: 110px;
+        padding: 11px 20px;
+        -webkit-box-shadow: 0 1px 4px rgba(0,0,0,.2);
+    -moz-box-shadow: 0 1px 4px rgba(0,0,0,.2);
+    box-shadow: 0 1px 4px rgba(0,0,0,.2);
+        .logo_site {
+            z-index: 1000000;
+            width: 280px;
+            left: 50px;
+            top: 25px;
+        }
+    }
+
+    .text_part {
+        font-size: 19px;
+        margin-top: -120px;
+        padding: 15px;
+
+        @media screen and (max-width:767px) {
+            margin-top: -90px;
+        }
+
+        .main_text {
+            border-radius: 7px;
+            background-color: rgba(255, 195, 29, 1);
+            padding: 30px;
+        }
+
+        @media screen and (max-width:767px) {
+
+            .main_text {
+            }
+        }
+    }
+}
+
+.sazeh_link {
+    white-space: nowrap;
+
+    a:hover {
+        color: #12442b;
+    }
+}

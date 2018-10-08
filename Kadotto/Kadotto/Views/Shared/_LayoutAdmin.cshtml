@@ -1,0 +1,51 @@
+﻿
+
+@{
+    Layout = "~/Views/Shared/_Layout.cshtml";
+}
+
+@RenderSection("scripts", false)
+
+@section HeaderSection
+{
+
+}
+
+@section MenuSection
+{
+
+}
+<div class="contactus_main">
+
+    <div class="section pages_banner">
+        <div class="banner_wrapper">
+        </div>
+    </div>
+    <div class="container">
+        <div class="row">
+            <div class="col-sm-6">
+                <div class="page_title_box">
+                    <div class="pages_title_header">
+                        <span class="page_title_text">@ViewBag.Title</span>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <br />
+        <div class="row">
+            <div class="col-sm-12">
+              @RenderBody()
+            </div>
+        </div>
+        <br />
+        <div>
+        </div>
+    </div>
+</div>
+
+
+
+@section FooterSection
+{
+
+}

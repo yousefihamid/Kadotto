@@ -1,0 +1,10 @@
+D:\Mysource\Kadoto\Kadotto\Common\bin\Debug\Common.dll
+D:\Mysource\Kadoto\Kadotto\Common\bin\Debug\Common.pdb
+D:\Mysource\Kadoto\Kadotto\Common\obj\Debug\Common.csprojResolveAssemblyReference.cache
+D:\Mysource\Kadoto\Kadotto\Common\obj\Debug\Common.dll
+D:\Mysource\Kadoto\Kadotto\Common\obj\Debug\Common.pdb
+D:\Mysource\Projects\Kadoto\Kadotto\Common\bin\Debug\Common.dll
+D:\Mysource\Projects\Kadoto\Kadotto\Common\bin\Debug\Common.pdb
+D:\Mysource\Projects\Kadoto\Kadotto\Common\obj\Debug\Common.csprojResolveAssemblyReference.cache
+D:\Mysource\Projects\Kadoto\Kadotto\Common\obj\Debug\Common.dll
+D:\Mysource\Projects\Kadoto\Kadotto\Common\obj\Debug\Common.pdb

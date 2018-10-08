@@ -1,0 +1,49 @@
+﻿body {
+  font-family: 'Roboto', sans-serif;
+}
+.main_sazeh_co {
+  position: relative;
+  padding: 0;
+}
+.main_sazeh_co .back_left_wrapper {
+  height: 100vh;
+  position: relative;
+  /*background:url(../Images/sazeh_co_ir.jpg) left top no-repeat;*/
+  background-size: contain;
+  width: 100%;
+}
+.main_sazeh_co .header_co {
+  position: relative;
+  height: 110px;
+  padding: 11px 20px;
+  -webkit-box-shadow: 0 1px 4px rgba(0, 0, 0, 0.2);
+  -moz-box-shadow: 0 1px 4px rgba(0, 0, 0, 0.2);
+  box-shadow: 0 1px 4px rgba(0, 0, 0, 0.2);
+}
+.main_sazeh_co .header_co .logo_site {
+  z-index: 1000000;
+  width: 280px;
+  left: 50px;
+  top: 25px;
+}
+.main_sazeh_co .text_part {
+  font-size: 19px;
+  margin-top: -120px;
+  padding: 15px;
+}
+@media screen and (max-width: 767px) {
+  .main_sazeh_co .text_part {
+    margin-top: -90px;
+  }
+}
+.main_sazeh_co .text_part .main_text {
+  border-radius: 7px;
+  background-color: #ffc31d;
+  padding: 30px;
+}
+.sazeh_link {
+  white-space: nowrap;
+}
+.sazeh_link a:hover {
+  color: #12442b;
+}

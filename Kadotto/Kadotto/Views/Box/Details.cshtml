@@ -1,0 +1,75 @@
+﻿
+@{
+    ViewBag.Title = "Create";
+    Layout = "~/Views/Shared/_LayoutAdmin.cshtml";
+}
+@section scripts
+{
+    <script src="~/Scripts/Kadotto/Box/BoxDetails.js"></script>
+}
+    <form id="info-form" class="form-horizontal" data-toggle="validator" role="form">
+        <div class="form-group">
+            <label class="control-label col-md-2" for="Name">Name</label>
+            <div class="col-md-10">
+                <input class="form-control text-box single-line" id="Name" type="text" required="required">
+                <div class="help-block with-errors"></div>
+            </div>
+        </div>
+        <div class="form-group">
+            <label class="control-label col-md-2" for="BoxSize">BoxSize</label>
+            <div class="col-md-10">
+                <input class="form-control text-box single-line required" id="BoxSize" type="text" required="required">
+                <div class="help-block with-errors"></div>
+            </div>
+        </div>
+        <div class="form-group">
+            <label class="control-label col-md-2" for="BoxPlaceCount">BoxPlaceCount</label>
+            <div class="col-md-10">
+                <input class="form-control text-box single-line required" id="BoxPlaceCount" type="text" required="required">
+                <div class="help-block with-errors"></div>
+            </div>
+        </div>
+        <div class="form-group">
+            <label class="control-label col-md-2" for="DisplayOrder">DisplayOrder</label>
+            <div class="col-md-10">
+                <input class="form-control text-box single-line required" id="DisplayOrder" type="text" required="required">
+                <div class="help-block with-errors"></div>
+            </div>
+        </div>
+        <div class="form-group">
+            <label class="control-label col-md-2" for="Description">Description</label>
+            <div class="col-md-10">
+                <textarea class="form-control text-box single-line required" cols="80" id="Description" type="text" required="required"></textarea>
+                <div class="help-block with-errors"></div>
+            </div>
+        </div>
+        <div class="form-group">
+            <label class="control-label col-md-2" for="Description">Image</label>
+            <div class="col-md-1">
+                <button id="btnUploadPhoto" class="btn btn-default" type="button">Choose file</button>
+                <div id="errorPhoto"></div>
+            </div>
+            <div id="filePhoto" class="col-md-9">
+            </div>
+        </div>
+        <div class="form-group">
+            <div class="col-md-offset-2 col-md-10">
+                <button type="submit" value="Create" class="btn btn-default" >Save</button>
+            </div>
+        </div>
+    </form>
+<div>
+    @Html.ActionLink("Back to List", "Index")
+</div>
+
+<script>
+    var photouploader = singleUploaded([{ title: "Image files", extensions: "jpg" }],
+    'btnUploadPhoto',
+    '/upload/Upload',
+    'info-form',
+    '#filePhoto',
+    '#errorPhoto',
+    undefined,
+    '1mb',
+   true);
+</script>

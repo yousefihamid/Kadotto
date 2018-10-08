@@ -1,0 +1,88 @@
+﻿@using Common.Core;
+@{
+    ViewBag.Title = "Product";
+    Layout = "~/Views/Shared/_LayoutAdmin.cshtml";
+}
+@section scripts
+{
+    <script src="~/Scripts/Kadotto/Product/ProductDetails.js"></script>
+}
+    <form id="info-form" class="form-horizontal" data-toggle="validator" role="form">
+        <div class="form-group">
+            <label class="control-label col-md-2" for="Title">Title</label>
+            <div class="col-md-10">
+                <input class="form-control text-box single-line" id="Title" type="text" required="required">
+                <div class="help-block with-errors"></div>
+            </div>
+        </div>
+        <div class="form-group">
+            <label class="control-label col-md-2" for="Brif Description">BrifDescription</label>
+            <div class="col-md-10">
+                <input class="form-control text-box single-line" id="BrifDescription" type="text" required="required">
+                <div class="help-block with-errors"></div>
+            </div>
+        </div>
+        <div class="form-group">
+            <label class="control-label col-md-2" for="ProductCategory">ProductCategory</label>
+            <div class="col-md-10">
+                <select id="ProductCategory" class="form-control text-box single-line" required="required" >
+                    @foreach (ProductCategoryDTO item in ViewBag.ProductCategories)
+                    {
+                            <option value="@item.ID">@item.Title</option>
+                    }
+                </select>
+
+                <div class="help-block with-errors"></div>
+            </div>
+        </div>
+        <div class="form-group">
+            <label class="control-label col-md-2" for="Vendor">Vendor</label>
+            <div class="col-md-10">
+                <input class="form-control text-box single-line" id="Vendor" type="text" required="required">
+                <div class="help-block with-errors"></div>
+            </div>
+        </div>
+        <div class="form-group">
+            <label class="control-label col-md-2" for="Quantity">Quantity</label>
+            <div class="col-md-10">
+                <input class="form-control text-box single-line" id="Quantity" type="text" required="required">
+                <div class="help-block with-errors"></div>
+            </div>
+        </div>
+        <div class="form-group">
+            <label class="control-label col-md-2" for="Weight">Weight</label>
+            <div class="col-md-10">
+                <input class="form-control text-box single-line" id="Weight" type="text" required="required">
+                <div class="help-block with-errors"></div>
+            </div>
+        </div>
+        <div class="form-group">
+            <label class="control-label col-md-2" for="Height">Height</label>
+            <div class="col-md-10">
+                <input class="form-control text-box single-line" id="Height" type="text" required="required">
+                <div class="help-block with-errors"></div>
+            </div>
+        </div>
+        <div class="form-group">
+            <label class="control-label col-md-2" for="DisplayOrder">DisplayOrder</label>
+            <div class="col-md-10">
+                <input class="form-control text-box single-line" id="DisplayOrder" type="text" required="required">
+                <div class="help-block with-errors"></div>
+            </div>
+        </div>
+        <div class="form-group">
+            <label class="control-label col-md-2" for="LongDescription">Long Description</label>
+            <div class="col-md-10">
+                <textarea class="form-control text-box single-line required" cols="80" id="LongDescription" type="text" required="required"></textarea>
+                <div class="help-block with-errors"></div>
+            </div>
+        </div>
+        <div class="form-group">
+            <div class="col-md-offset-2 col-md-10">
+                <button type="submit" value="Create" class="btn btn-default" >Save</button>
+            </div>
+        </div>
+    </form>
+<div>
+    @Html.ActionLink("Back to List", "Index")
+</div>

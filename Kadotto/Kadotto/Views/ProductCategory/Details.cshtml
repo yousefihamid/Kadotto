@@ -1,0 +1,40 @@
+﻿@using Common.Core;
+@{
+    ViewBag.Title = "Product Category";
+    Layout = "~/Views/Shared/_LayoutAdmin.cshtml";
+}
+@section scripts
+{
+    <script src="~/Scripts/Kadotto/ProductCategory/ProductCategoryDetails.js"></script>
+}
+    <form id="info-form" class="form-horizontal" data-toggle="validator" role="form">
+        <div class="form-group">
+            <label class="control-label col-md-2" for="Title">Title</label>
+            <div class="col-md-10">
+                <input class="form-control text-box single-line" id="Title" type="text" required="required">
+                <div class="help-block with-errors"></div>
+            </div>
+        </div>
+        <div class="form-group">
+            <label class="control-label col-md-2" for="ParentProductCategory">Parent</label>
+            <div class="col-md-10">
+                <select id="ParentProductCategory" class="form-control text-box single-line" >
+                    <option value="">Select...</option>
+                    @foreach (ProductCategoryDTO item in ViewBag.ProductCategories)
+                    {
+                            <option value="@item.ID">@item.Title</option>
+                    }
+                </select>
+
+                <div class="help-block with-errors"></div>
+            </div>
+        </div>
+        <div class="form-group">
+            <div class="col-md-offset-2 col-md-10">
+                <button type="submit" value="Create" class="btn btn-default" >Save</button>
+            </div>
+        </div>
+    </form>
+<div>
+    @Html.ActionLink("Back to List", "Index")
+</div>

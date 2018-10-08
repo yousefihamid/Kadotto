@@ -1,0 +1,56 @@
+﻿
+@{
+    ViewBag.Title = "Send Code";
+    Layout = "~/Views/Shared/_LayoutHome.cshtml";
+}
+
+<div class="contactus_main">
+    <div class="container">
+        <div class="row">
+            <div class="col-sm-12">
+                <div class="contact_us_form_wrap card">
+                    <div class="card_body">
+                        <div class="row">
+                            <div class="col-sm-7">
+                                <div class="">
+                                    <div class="c_u_form_header forms_header">
+                                    </div>
+                                    <form id="info-form" data-toggle="validator" role="form">
+                                        <div class="row">
+                                            <div class="col-xs-12">
+                                                <div class="form-group">
+                                                    <label for="fname">Mobile Number:</label>
+                                                    <input type="text" class="form-control" id="MobileNumber" required="required">
+                                                    <div class="help-block with-errors"></div>
+                                                </div>
+                                            </div>
+                                        </div>
+                                        <div class="row">
+                                            <div class="col-xs-12">
+                                                <button type="submit" class="contactus_submit btn_with_loader btn btn_general">
+                                                    <div class="spinner hidden"></div>
+                                                    <span class="submit_text btn_with_loader_text">Send Code</span>
+                                                </button><span class="response_contact_text message_sent hidden">Your message was sent successfully. Thank you.</span>
+                                            </div>
+                                        </div>
+                                    </form>
+                                </div>
+                                <hr class="visible-xs" />
+                            </div>
+                            <div class="col-sm-5 border_left_gray">
+
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <div class="col-sm-6">
+            </div>
+        </div>
+        <br />
+        <div>
+        </div>
+    </div>
+</div>
+
+<script src="~/Scripts/Kadotto/Account/SendCode.js"></script>

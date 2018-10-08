@@ -1,0 +1,158 @@
+﻿@using Common.Core;
+
+@{
+    ViewBag.Title = "Product";
+    Layout = "~/Views/Shared/_LayoutAdmin.cshtml";
+}
+@section scripts
+{
+    <script src="~/Scripts/Kadotto/Product/ProductList.js"></script>
+}
+<p>
+    @Html.ActionLink("Create New", "Details")
+</p>
+<table class="table">
+    <tr>
+        <th>
+            Title
+        </th>
+        <th>
+            BrifDescription
+        </th>
+        <th>
+            Vendor
+        </th>
+        <th>
+            Quantity
+        </th>
+        <th>
+            Weight
+        </th>
+        <th>
+            Height
+        </th>
+        <th></th>
+    </tr>
+
+@foreach (ProductDTO item in ViewBag.Products) {
+    <tr>
+        <td>
+            @item.Title
+        </td>
+        <td>
+            @item.BrifDescription
+        </td>
+        <td>
+            @item.Vendor
+        </td>
+        <td>
+            @item.Quantity
+        </td>
+        <td>
+            @item.Weight
+        </td>
+        <td>
+            @item.Height
+        </td>
+        <td>
+            <span class="glyphicon glyphicon-edit" onclick="$.Product.Edit(@item.ID)"></span> |
+            <span class="glyphicon glyphicon-info-sign" onclick="$.Product.View(@item.ID)"></span> |
+            <span class="glyphicon glyphicon-trash" onclick="$.Product.Delete(@item.ID)"></span>
+        </td>
+    </tr>
+}
+
+</table>
+<div class="hidden">
+    <div class="details_fn">
+        <div class="row">
+            <div class="col-md-3">
+                <span>Title</span>
+            </div>
+            <div class="col-md-9">
+                <span class="Title"></span>
+            </div>
+        </div>
+        <div class="row">
+            <div class="col-md-3">
+                <span>BrifDescription</span>
+            </div>
+            <div class="col-md-9">
+                <span class="BrifDescription"></span>
+            </div>
+        </div>
+        <div class="row">
+            <div class="col-md-3">
+                <span>Product Category</span>
+            </div>
+            <div class="col-md-9">
+                <span class="ProductCategoryTitle"></span>
+            </div>
+        </div>
+        <div class="row">
+            <div class="col-md-3">
+                <span>Vendor</span>
+            </div>
+            <div class="col-md-9">
+                <span class="Vendor"></span>
+            </div>
+        </div>
+        <div class="row">
+            <div class="col-md-3">
+                <span>Quantity</span>
+            </div>
+            <div class="col-md-9">
+                <span class="Quantity"></span>
+            </div>
+        </div>
+        <div class="row">
+            <div class="col-md-3">
+                <span>Weight</span>
+            </div>
+            <div class="col-md-9">
+                <span class="Weight"></span>
+            </div>
+        </div>
+        <div class="row">
+            <div class="col-md-3">
+                <span>Height</span>
+            </div>
+            <div class="col-md-9">
+                <span class="Height"></span>
+            </div>
+        </div>
+        <div class="row">
+            <div class="col-md-3">
+                <span>DisplayOrder</span>
+            </div>
+            <div class="col-md-9">
+                <span class="DisplayOrder"></span>
+            </div>
+        </div>
+        <div class="row">
+            <div class="col-md-3">
+                <span>CreationDate</span>
+            </div>
+            <div class="col-md-9">
+                <span class="CreationDate"></span>
+            </div>
+        </div>
+        <div class="row">
+            <div class="col-md-3">
+                <span>UpdateDate</span>
+            </div>
+            <div class="col-md-9">
+                <span class="UpdateDate"></span>
+            </div>
+        </div>
+        <div class="row">
+            <div class="col-md-3">
+                <span>LongDescription</span>
+            </div>
+            <div class="col-md-9">
+                <span class="LongDescription"></span>
+            </div>
+        </div>
+    </div>
+</div>
+
