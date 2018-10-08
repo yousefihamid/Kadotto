@@ -1,6 +1,5 @@
 ﻿$(function () {
     $.Register = {
-        SelectedID: 0,
         init: function () {
             $(document).ready(function () {
                 $('#info-form').validator().on('submit', function (e) {
