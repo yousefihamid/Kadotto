@@ -14,6 +14,7 @@
                             PhoneNumber: $('#PhoneNumber').val(),
                             Name: $('#Name').val(),
                             Family: $('#Family').val(),
+                            Email: $('#Email').val(),
                         };
                         $.ajax({
                             url: '/Account/Add',

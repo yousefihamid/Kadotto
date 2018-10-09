@@ -3,12 +3,12 @@ using System.Data.Entity.ModelConfiguration;
 
 namespace DataAccess.Mapping
 {
-    public class UserMap : EntityTypeConfiguration<UserModel>
+    public class CustomerMap : EntityTypeConfiguration<CustomerModel>
     {
-        public UserMap()
+        public CustomerMap()
         {
             this.HasKey(m => m.ID);
-            this.ToTable("User");
+            this.ToTable("Customer");
         }
     }
 }

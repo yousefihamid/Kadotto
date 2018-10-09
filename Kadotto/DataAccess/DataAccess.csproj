@@ -50,7 +50,7 @@
   </ItemGroup>
   <ItemGroup>
     <Compile Include="Context\BaseContext.cs" />
-    <Compile Include="Mapping\UserMap.cs" />
+    <Compile Include="Mapping\CustomerMap.cs" />
     <Compile Include="Mapping\ProductCategoryMap.cs" />
     <Compile Include="Mapping\ProductAllowedPartitionMap.cs" />
     <Compile Include="Mapping\ProductMap.cs" />
@@ -61,7 +61,7 @@
     <Compile Include="Model\ProductModel.cs" />
     <Compile Include="Model\PartitionModel.cs" />
     <Compile Include="Model\BoxModel.cs" />
-    <Compile Include="Model\UserModel.cs" />
+    <Compile Include="Model\CustomerModel.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
   </ItemGroup>
   <ItemGroup>

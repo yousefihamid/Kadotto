@@ -1,0 +1,128 @@
+﻿@using Common.Core;
+@{
+    ViewBag.Title = "Customers";
+    Layout = "~/Views/Shared/_LayoutAdmin.cshtml";
+}
+
+@section scripts
+{
+    <script src="~/Scripts/Kadotto/Customer/CustomerList.js"></script>
+}
+
+
+<table class="table">
+    <tr>
+        <th>
+            Name And Family
+        </th>
+        <th>
+            UserName
+        </th>
+        <th>
+            Phone Number
+        </th>
+        <th>
+            Email
+        </th>
+        <th>
+            Is Active
+        </th>
+        <th></th>
+    </tr>
+
+    @foreach (CustomerDTO item in ViewBag.Customers)
+    {
+        <tr>
+            <td>
+                @item.Name @item.Family 
+            </td>
+            <td>
+                @item.UserName
+            </td>
+            <td>
+                @item.PhoneNumber
+            </td>
+            <td>
+                @item.Email
+            </td>
+            <td>
+                @item.IsActive
+            </td>
+            <td>
+                <span class="glyphicon glyphicon-edit" onclick="$.Customer.Edit(@item.ID)"></span> |
+                <span class="glyphicon glyphicon-info-sign" onclick="$.Customer.View(@item.ID)"></span> |
+                <span class="glyphicon glyphicon-trash" onclick="$.Customer.Delete(@item.ID)"></span>
+            </td>
+        </tr>
+    }
+
+</table>
+<div class="hidden">
+    <div class="details_fn">
+        <div class="row">
+            <div class="col-md-3">
+                <span>Name And Family</span>
+            </div>
+            <div class="col-md-9">
+                <span class="NameFamily"></span>
+            </div>
+        </div>
+        <div class="row">
+            <div class="col-md-3">
+                <span>UserName</span>
+            </div>
+            <div class="col-md-9">
+                <span class="UserName"></span>
+            </div>
+        </div>
+        <div class="row">
+            <div class="col-md-3">
+                <span>Phone Number</span>
+            </div>
+            <div class="col-md-9">
+                <span class="PhoneNumber"></span>
+            </div>
+        </div>
+        <div class="row">
+            <div class="col-md-3">
+                <span>Email</span>
+            </div>
+            <div class="col-md-9">
+                <span class="Email"></span>
+            </div>
+        </div>
+        <div class="row">
+            <div class="col-md-3">
+                <span>Is Verified</span>
+            </div>
+            <div class="col-md-9">
+                <span class="IsVerified"></span>
+            </div>
+        </div>
+        <div class="row">
+            <div class="col-md-3">
+                <span>Is Active</span>
+            </div>
+            <div class="col-md-9">
+                <span class="IsActive"></span>
+            </div>
+        </div>
+        <div class="row">
+            <div class="col-md-3">
+                <span>Is Admin</span>
+            </div>
+            <div class="col-md-9">
+                <span class="IsAdmin"></span>
+            </div>
+        </div>
+        <div class="row">
+            <div class="col-md-3">
+                <span>Creation Date</span>
+            </div>
+            <div class="col-md-9">
+                <span class="CreationDate"></span>
+            </div>
+        </div>
+    </div>
+</div>
+

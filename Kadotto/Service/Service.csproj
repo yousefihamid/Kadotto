@@ -54,7 +54,8 @@
     <Compile Include="Core\ProductService.cs" />
     <Compile Include="Core\ProductCategoryService.cs" />
     <Compile Include="Core\BoxService.cs" />
-    <Compile Include="Core\UserService.cs" />
+    <Compile Include="Authentication\UserService.cs" />
+    <Compile Include="Core\CustomerService.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
   </ItemGroup>
   <ItemGroup>
@@ -71,6 +72,7 @@
     <None Include="App.config" />
     <None Include="packages.config" />
   </ItemGroup>
+  <ItemGroup />
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
   <!-- To modify your build process, add your task inside one of the targets below and uncomment it. 
        Other similar extension points exist, see Microsoft.Common.targets.

@@ -1,4 +1,5 @@
 ﻿using Newtonsoft.Json;
+using Service.Authentication;
 using Service.Core;
 using System;
 using System.Net.Http;
@@ -19,7 +20,6 @@ namespace Kadotto
         }
         public override void OnActionExecuting(ActionExecutingContext filterContext)
         {
-            //SSO.Client.Authentication.Authenticate();
             bool Result = new UserService().HasAccess(filterContext.ActionDescriptor.ControllerDescriptor.ControllerName);
             if (Result == false)
                 filterContext.HttpContext.Response.Redirect("/Home/NoAccess", true);

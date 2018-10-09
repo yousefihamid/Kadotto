@@ -1,16 +1,16 @@
 ﻿$(function () {
     $.Tools = {
         ShowModal: function (config) {
-            $('.modal-title', '#modal-container').html(config.title);
-            $('.modal-body', '#modal-container').html(config.body);
-            $('.modal-footer', '#modal-container').html(config.footer);
+            $('.modal-title', '#myModal').html(config.title);
+            $('.modal-body', '#myModal').html(config.body);
+            $('.modal-footer', '#myModal').html(config.footer);
             if (config.showFooter == true) {
-                $('.modal-footer', '#modal-container').show();
+                $('.modal-footer', '#myModal').show();
             }
             else {
-                $('.modal-footer', '#modal-container').hide();
+                $('.modal-footer', '#myModal').hide();
             }
-            $('#modal-container').modal('show');
+            $('#myModal').modal('show');
         }
     };
 

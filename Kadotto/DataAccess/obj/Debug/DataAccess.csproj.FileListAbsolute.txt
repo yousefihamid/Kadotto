@@ -17,3 +17,4 @@ D:\Mysource\Projects\Kadoto\Kadotto\DataAccess\bin\Debug\EntityFramework.xml
 D:\Mysource\Projects\Kadoto\Kadotto\DataAccess\bin\Debug\EntityFramework.SqlServer.xml
 D:\Mysource\Projects\Kadoto\Kadotto\DataAccess\obj\Debug\DataAccess.dll
 D:\Mysource\Projects\Kadoto\Kadotto\DataAccess\obj\Debug\DataAccess.pdb
+D:\Mysource\Projects\Kadoto\Kadotto\DataAccess\obj\Debug\DataAccess.csprojResolveAssemblyReference.cache

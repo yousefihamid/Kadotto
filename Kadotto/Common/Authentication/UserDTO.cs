@@ -1,10 +1,4 @@
-﻿using System;
-using System.Collections.Generic;
-using System.Linq;
-using System.Text;
-using System.Threading.Tasks;
-
-namespace Common.Core
+﻿namespace Common.Authentication
 {
     public class UserDTO
     {
@@ -14,5 +8,6 @@ namespace Common.Core
         public string Name { get; set; }
         public string Family { get; set; }
         public bool IsAdmin { get; set; }
+        public string PhoneNumber { get; set; }
     }
 }

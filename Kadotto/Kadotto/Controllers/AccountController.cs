@@ -1,16 +1,8 @@
-﻿using System;
-using System.Globalization;
-using System.Linq;
-using System.Security.Claims;
-using System.Threading.Tasks;
-using System.Web;
-using System.Web.Mvc;
-using Microsoft.AspNet.Identity;
-using Microsoft.AspNet.Identity.Owin;
-using Microsoft.Owin.Security;
-using Kadotto.Models;
+﻿using System.Web.Mvc;
 using Common.Core;
 using Service.Core;
+using Service.Authentication;
+using Common.Authentication;
 
 namespace Kadotto.Controllers
 {
@@ -37,9 +29,9 @@ namespace Kadotto.Controllers
         }
 
         [HttpPost]
-        public JsonResult Add(UserDTO pUserDTO)
+        public JsonResult Add(CustomerDTO pCustomerDTO)
         {
-            var Result = new UserService().Add(pUserDTO);
+            var Result = new CustomerService().Add(pCustomerDTO);
             return Json(Result);
         }
 
@@ -67,7 +59,7 @@ namespace Kadotto.Controllers
         public JsonResult GetPhoneNumber()
         {
             var Result = new UserService().GetPhoneNumber();
-            return Json(Result);
+            return Json(Result, JsonRequestBehavior.AllowGet);
         }
     }
 }
