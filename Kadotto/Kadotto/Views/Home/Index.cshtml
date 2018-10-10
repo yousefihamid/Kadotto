@@ -1,5 +1,489 @@
 ﻿@{
-    ViewBag.Title = "Home Page";
+    ViewBag.Title = "Kaadoto";
     Layout = "~/Views/Shared/_LayoutHome.cshtml";
 }
 
+<script>
+        $(document).ready(function () {
+            $('.areas_items_carousel').owlCarousel({
+                loop: false,
+                dots: false,
+                margin: 20,
+                responsiveClass: true,
+                responsive: {
+                    0: {
+                        items: 1,
+                        nav: true
+                    },
+                    300: {
+                        items: 2,
+                        nav: false
+                    },
+                    450: {
+                        items: 3,
+                        nav: false
+                    },
+                    600: {
+                        items: 4,
+                        nav: false
+                    },
+                    1000: {
+                        items: 6,
+                        nav: true,
+                        loop: false
+                    }
+                }
+            });
+            $('.homepage-slide-carousel').owlCarousel({
+                animateOut: 'fadeOut',
+                animateIn: 'fadeIn',
+                items: 1,
+                margin: 0,
+                stagePadding: 0,
+                smartSpeed: 400,
+                autoplay: true,
+                autoplayTimeout: 4000,
+                autoplayHoverPause: true,
+                loop: true
+            });
+        });
+</script>
+
+<div class="section homepage_banner ">
+    <div class="container banner_welcome_text_wrapper visible-sm visible-md visible-lg">
+        <div class="banner_welcome_text">
+
+            <p>
+                Sazeh is a privately owned independent joint stock company founded in Iran in 1970, operating for over @ViewBag.Year years in a wide range of industrial and urban projects.
+            </p>
+            <p>
+                Sazeh is involved in engineering, procurement, construction, and commissioning of oil and gas industries both onshore and offshore as well as industrial plants.
+
+            </p>
+            <p>
+                Sazeh executes EPC projects on a lump sum turn-key basis and has the ability to integrate engineering, procurement, and construction to deliver an overall plant.
+            </p>
+        </div>
+    </div>
+
+    <div class="homepage-slide-carousel owl-carousel owl-theme">
+        <div class="banner_wrapper banner_first">
+            <div class="">
+                @* <img src="~/Content/Images/banner_bg.png" alt="Nature" class="img-responsive">*@
+            </div>
+
+        </div>
+        <div class="banner_wrapper banner_second">
+            <div class="">
+                @*   <img src="~/Content/Images/banner_page_1.png" alt="Nature" class="img-responsive">*@
+            </div>
+
+        </div>
+        <div class="banner_wrapper banner_third">
+            <div class="">
+                @*  <img src="~/Content/Images/banner_page_2.png" alt="Nature" class="img-responsive">*@
+            </div>
+
+        </div>
+        <div class="banner_wrapper banner_forth">
+            <div class="">
+                @*   <img src="~/Content/Images/banner_page_3.png" alt="Nature" class="img-responsive">*@
+            </div>
+
+        </div>
+        <div class="banner_wrapper banner_fifth">
+            <div class="">
+                @*<img src="~/Content/Images/banner_page_4.png" alt="Nature" class="responsive">*@
+            </div>
+
+        </div>
+    </div>
+
+
+</div>
+<div class="section home_xs_welcome visible-xs">
+    <div class="container">
+
+        <div class="banner_welcome_text text-center">
+            <p>
+                Sazeh is a privately owned independent, joint stock company founded in Iran in 1970, operating for over 45 years in a wide range of industrial and urban projects.
+            </p>
+            <p>
+                Sazeh is involved in engineering, procurement, construction and commissioning of oil and gas industries both onshore and offshore as well as industrial plants.
+
+            </p>
+            <p>
+                Sazeh executes EPC projects on a lump sum turn-key basis and has the ability to integrate engineering, procurement and construction to deliver an overall plant.
+            </p>
+        </div>
+    </div>
+
+</div>
+<div class="section home_areasofactivity">
+    <div class="container">
+
+        <div class="section_header">
+            <h2>Areas of Activity</h2>
+        </div>
+        <div class="areas_items_wrapper areas_items_carousel owl-carousel owl-theme">
+            <a href=@Url.Action("GetByExperience", "Project",new { Experience = "Oil_and_Gas_Production" })>
+                <div class="areas_item">
+                    <div class="areas_item_img">
+                        <img src="~/Content/Images/oil_&_gas_production.png" />
+                    </div>
+                    <hr />
+                    <div class="areas_item_text">
+                        <span>
+                            Oil & Gas
+                        </span>
+                        <br />
+                        <span>
+                            Production
+                        </span>
+                    </div>
+                </div>
+            </a>
+            <a href=@Url.Action("GetByExperience", "Project",new { Experience = "Gas_Processing" })>
+                <div class="areas_item">
+                    <div class="areas_item_img">
+                        <img src="~/Content/Images/gas_processing.png" />
+                    </div>
+                    <hr />
+                    <div class="areas_item_text">
+                        <span>
+                            Gas
+                        </span>
+                        <br />
+                        <span>
+                            Processing
+                        </span>
+                    </div>
+                </div>
+            </a>
+            <a href=@Url.Action("GetByExperience", "Project",new { Experience = "Petroleum_Refining" })>
+                <div class="areas_item">
+                    <div class="areas_item_img">
+                        <img src="~/Content/Images/petroleum_refining.png" />
+                    </div>
+                    <hr />
+                    <div class="areas_item_text">
+                        <span>
+                            Petroleum
+
+                        </span>
+                        <br />
+                        <span>
+                            Refining
+                        </span>
+                    </div>
+                </div>
+            </a>
+            <a href=@Url.Action("GetByExperience", "Project",new { Experience = "Pipelines" })>
+                <div class="areas_item">
+                    <div class="areas_item_img">
+                        <img src="~/Content/Images/pipelines.png" />
+                    </div>
+                    <hr />
+                    <div class="areas_item_text">
+                        <span>
+                            Pipelines
+
+                        </span>
+                        <br />
+                        <span></span>
+                    </div>
+                </div>
+            </a>
+            <a href=@Url.Action("GetByExperience", "Project",new { Experience = "Offshore_Oil_and_Gas" })>
+                <div class="areas_item">
+                    <div class="areas_item_img">
+                        <img src="~/Content/Images/offshore_oil_and_gas_facilities.png" />
+                    </div>
+                    <hr />
+                    <div class="areas_item_text">
+                        <span>
+                            Offshore Oil
+
+
+                        </span>
+                        <br />
+                        <span>and </span>
+                        <br />
+                        <span>
+                            Gas Facilities
+                        </span>
+                    </div>
+                </div>
+            </a>
+            <a href=@Url.Action("GetByExperience", "Project",new { Experience = "Petrochemical_and_Chemical" })>
+                <div class="areas_item">
+                    <div class="areas_item_img">
+                        <img src="~/Content/Images/petrochemical_and_chemical_plants.png" />
+                    </div>
+                    <hr />
+                    <div class="areas_item_text">
+                        <span>
+                            Petrochemical
+                        </span>
+                        <br />
+                        <span>
+                            and
+                        </span>
+                        <br />
+                        <span>
+                            Chemical Plants
+                        </span>
+                    </div>
+                </div>
+            </a>
+            <a href=@Url.Action("GetByExperience", "Project",new { Experience = "Power_Systems" })>
+                <div class="areas_item">
+                    <div class="areas_item_img">
+                        <img src="~/Content/Images/power_generation_and_transmission.png" />
+                    </div>
+                    <hr />
+                    <div class="areas_item_text">
+                        <span>
+                            Power
+                        </span>
+                        <br />
+                        <span>
+                            Generation and Transmission
+                        </span>
+                    </div>
+                </div>
+            </a>
+            <a href=@Url.Action("GetByExperience", "Project",new { Experience = "Industrial_Plants" })>
+                <div class="areas_item">
+                    <div class="areas_item_img">
+                        <img src="~/Content/Images/industrial_plants.png" />
+                    </div>
+                    <hr />
+                    <div class="areas_item_text">
+                        <span>
+                            Industrial
+
+                        </span>
+                        <br />
+                        <span>
+                            Plants
+                        </span>
+                    </div>
+                </div>
+            </a>
+            <a href=@Url.Action("GetByExperience", "Project",new { Experience = "Pulp_and_Paper" })>
+                <div class="areas_item">
+                    <div class="areas_item_img">
+                        <img src="~/Content/Images/pulp_and_paper_agro_industry.png" />
+                    </div>
+                    <hr />
+                    <div class="areas_item_text">
+                        <span>
+                            Pulp and
+
+                        </span>
+                        <br />
+                        <span>
+                            Paper / Agro
+                        </span>
+                        <br />
+                        <span>
+                            Industry
+                        </span>
+                    </div>
+                </div>
+            </a>
+            <a href=@Url.Action("GetByExperience", "Project",new { Experience = "Architecture" })>
+                <div class="areas_item">
+                    <div class="areas_item_img">
+                        <img src="~/Content/Images/architecture.png" />
+                    </div>
+                    <hr />
+                    <div class="areas_item_text">
+                        <span>
+                            Architecture
+
+                        </span>
+                    </div>
+                </div>
+            </a>
+            <a href=@Url.Action("SeCity", "SoftwareEngineering")>
+                <div class="areas_item">
+                    <div class="areas_item_img">
+                        <img src="~/Content/Images/software_engineering.png" />
+                    </div>
+                    <hr />
+                    <div class="areas_item_text">
+                        <span>
+                            Systems
+                        </span>
+                        <br />
+                        <span>
+                            and
+                        </span>
+                        <br />
+                        <span>
+                            Software Engineering
+                        </span>
+                    </div>
+                </div>
+            </a>
+        </div>
+    </div>
+    <!-- Set up your HTML -->
+</div>
+
+<div class="section home_indicator_projects">
+    <div class="container">
+        <div class="section_header">
+            <h2>Signature Projects</h2>
+        </div>
+        <div class="indicator_projects_items_wrapper row">
+            <div class="col-lg-4 col-md-4 col-sm-6 col-xs-12">
+                <div class="indicator_projects_item">
+                    <div class="indicator_projects_item_img over_mask">
+                        <img src="~/Content/Images/Project/South_Pars_Gas_Field_Development_Phase_12/South_Pars_Gas_Field_Development_Phase_12(1).jpg" />
+                        <div class="mask white-slight">
+                        </div>
+                    </div>
+                    <div class="indicator_projects_item_text">
+                        <div class="indicator_projects_item_top">
+                            <span class="project_area">Gas Processing</span><br />
+                            <span class="project_title">
+                                South Pars Gas Field Development Phase 12
+                            </span>
+                        </div>
+
+                        <hr />
+                        <div class="project_footer">
+                            <a href=@Url.Action("Details", "Project",new { FolderName = "South_Pars_Gas_Field_Development_Phase_12" })>
+                                <span>Read More </span><span class="glyphicon glyphicon-chevron-right"></span>
+                            </a>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <div class="col-lg-4 col-md-4 col-sm-6 col-xs-12">
+                <div class="indicator_projects_item">
+                    <div class="indicator_projects_item_img over_mask">
+                        <img src="~/Content/Images/Project/Shazand_Imam_Khomeini_Refinery_Expansion_and_Upgrading/Shazand_Imam_Khomeini_Refinery_Expansion_and_Upgrading(1).jpg" />
+                        <div class="mask white-slight">
+                        </div>
+                    </div>
+                    <div class="indicator_projects_item_text">
+                        <div class="indicator_projects_item_top">
+                            <span class="project_area">Petroleum Refining</span><br />
+                            <span class="project_title">
+                                Shazand Imam Khomeini Refinery Expansion & Upgrading Project
+                            </span>
+                        </div>
+
+                        <hr />
+                        <div class="project_footer">
+                            <a href=@Url.Action("Details", "Project",new { FolderName = "Shazand_Imam_Khomeini_Refinery_Expansion_and_Upgrading" })>
+                                <span>Read More </span><span class="glyphicon glyphicon-chevron-right"></span>
+                            </a>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <div class="col-lg-4 col-md-4 col-sm-6 col-xs-12">
+                <div class="indicator_projects_item">
+                    <div class="indicator_projects_item_img over_mask">
+                        <img src="~/Content/Images/Project/PVC_Project_in_Bandar_Imam/PVC_Project_in_Bandar_Imam(1).jpg" />
+                        <div class="mask white-slight">
+                        </div>
+                    </div>
+                    <div class="indicator_projects_item_text">
+                        <div class="indicator_projects_item_top">
+                            <span class="project_area">Petrochemical and Chemical Plants</span><br />
+                            <span class="project_title">
+                                PVC Complex
+                            </span>
+                        </div>
+
+                        <hr />
+                        <div class="project_footer">
+                            <a href=@Url.Action("Details", "Project",new { FolderName = "PVC_Project_in_Bandar_Imam" })>
+                                <span>Read More </span><span class="glyphicon glyphicon-chevron-right"></span>
+                            </a>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <div class="col-lg-4 col-md-4 col-sm-6 col-xs-12">
+                <div class="indicator_projects_item">
+                    <div class="indicator_projects_item_img over_mask">
+                        <img src="~/Content/Images/Project/4th_Aromatics_Plant/4th_Aromatics_Plant(1).jpg" />
+                        <div class="mask white-slight">
+                        </div>
+                    </div>
+                    <div class="indicator_projects_item_text">
+                        <div class="indicator_projects_item_top">
+                            <span class="project_area">Petrochemical & Chemical</span><br />
+                            <span class="project_title">
+                                4th Aromatics Plant
+                            </span>
+                        </div>
+
+                        <hr />
+                        <div class="project_footer">
+                            <a href=@Url.Action("Details", "Project",new { FolderName = "4th_Aromatics_Plant" })>
+                                <span>Read More </span><span class="glyphicon glyphicon-chevron-right"></span>
+                            </a>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <div class="col-lg-4 col-md-4 col-sm-6 col-xs-12">
+                <div class="indicator_projects_item">
+                    <div class="indicator_projects_item_img over_mask">
+                        <img src="~/Content/Images/Project/Bid_Boland_II_Gas_Treating_Plant/Bid_Boland_II_Gas_Treating_Plant(1).jpg" />
+                        <div class="mask white-slight">
+                        </div>
+                    </div>
+                    <div class="indicator_projects_item_text">
+                        <div class="indicator_projects_item_top">
+                            <span class="project_area">Oil & Gas Production</span><br />
+                            <span class="project_title">
+                                Bid Boland II Gas Treating
+                            </span>
+                        </div>
+
+                        <hr />
+                        <div class="project_footer">
+                            <a href=@Url.Action("Details", "Project",new { FolderName = "Bid_Boland_II_Gas_Treating_Plant" })>
+                                <span>Read More </span><span class="glyphicon glyphicon-chevron-right"></span>
+                            </a>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <div class="col-lg-4 col-md-4 col-sm-6 col-xs-12">
+                <div class="indicator_projects_item">
+                    <div class="indicator_projects_item_img over_mask">
+                        <img src="~/Content/Images/Project/Renovation_of_Kharg_Terminals/Renovation_of_Kharg_Terminals(1).jpg" />
+                        <div class="mask white-slight">
+                        </div>
+                    </div>
+                    <div class="indicator_projects_item_text">
+                        <div class="indicator_projects_item_top">
+                            <span class="project_area">Oil & Gas Production</span><br />
+                            <span class="project_title">
+                                Renovation Of Kharg Terminals
+                            </span>
+                        </div>
+
+                        <hr />
+                        <div class="project_footer">
+                            <a href=@Url.Action("Details", "Project",new { FolderName = "Renovation_of_Kharg_Terminals" })>
+                                <span>Read More </span><span class="glyphicon glyphicon-chevron-right"></span>
+                            </a>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <div class="clearfix"></div>
+        </div>
+    </div>
+</div>

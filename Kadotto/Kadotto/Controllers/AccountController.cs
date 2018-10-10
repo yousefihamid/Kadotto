@@ -61,5 +61,12 @@ namespace Kadotto.Controllers
             var Result = new UserService().GetPhoneNumber();
             return Json(Result, JsonRequestBehavior.AllowGet);
         }
+
+        [HttpGet]
+        public JsonResult GetCurrentUser()
+        {
+            var Result = new UserService().GetCurrentUser();
+            return Json(Result, JsonRequestBehavior.AllowGet);
+        }
     }
 }

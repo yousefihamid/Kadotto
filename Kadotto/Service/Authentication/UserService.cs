@@ -10,13 +10,16 @@ namespace Service.Authentication
     {
         public UserDTO GetCurrentUser()
         {
-            var Result = new UserDTO();
+            UserDTO Result = null;
 
             if (System.Web.HttpContext.Current.Session["User"] == null)
             {
                 string UserName = System.Web.HttpContext.Current.Session["UserName"]?.ToString();
-                Result = GetByUserName(UserName);
-                System.Web.HttpContext.Current.Session["User"] = Result;
+                if (string.IsNullOrEmpty(UserName) == false)
+                {
+                    Result = GetByUserName(UserName);
+                    System.Web.HttpContext.Current.Session["User"] = Result;
+                }
             }
             else Result = (UserDTO)System.Web.HttpContext.Current.Session["User"];
 
@@ -45,8 +48,8 @@ namespace Service.Authentication
         {
             bool Result = false;
             var User = GetCurrentUser();
-            if (User.IsAdmin)
-                Result = true;
+            if (User != null)
+                Result = User.IsAdmin;
             return Result;
         }
 

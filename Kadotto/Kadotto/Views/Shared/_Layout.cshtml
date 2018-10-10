@@ -24,12 +24,12 @@
     <script src="~/Scripts/General/bootstrap.min.js"></script>
     <script src="~/Scripts/General/jquery.validate.min.js"></script>
     <script src="~/Scripts/General/validator.min.js"></script>
-    @*<script src="~/Scripts/Sazeh.CoIR/Project/Project.js"></script>*@
     <script src="~/Scripts/General/typeahead.bundle.js"></script>
     <script src="~/Scripts/Core/Ajax.Service.js"></script>
     <script src="~/Scripts/Core/Ajax.Models.Service.js"></script>
     <script src="~/Scripts/Core/utility.js"></script>
     <script src="~/Scripts/Core/Tools.js"></script>
+    <script src="~/Scripts/Kadotto/Base/Kaadoto.js"></script>
     <script>
         $(document).ready(function () {
 
@@ -110,10 +110,21 @@
                                 <ul class="nav navbar-nav">
                                     <li class="active"><a href="/Home/Index">Home</a></li>
                                     <li><a href="/Home/About">About</a></li>
-                                    <li><a href="/Account/Login">Log In</a></li>
-                                    <li><a href="/Account/SendCode">Register</a></li>
                                     <li><a href="/Home/Contact">Contact</a></li>
-                                    <li class="hidden"><a href="/Box/Index">Admin</a></li>
+                                    <li class="loginMenu"><a href="/Account/Login">Log In</a></li>
+                                    <li class="registerMenu"><a href="/Account/SendCode">Register</a></li>
+                                    <li class="adminMenu hidden">
+                                        <a class="dropdown-toggle" data-toggle="dropdown" href="#">
+                                            Admin
+                                            <span class="caret"></span>
+                                        </a>
+                                        <ul class="dropdown-menu">
+                                            <li><a href="/Box/Index">Box</a></li>
+                                            <li><a href="/Product/Index">Product</a></li>
+                                            <li><a href="/Partition/Index">Partition</a></li>
+                                            <li><a href="/Customer/Index">Customer</a></li>
+                                        </ul>
+                                    </li>
                                 </ul>
                                 <div class="navbar-form navbar-right hidden-xs">
                                     <div class="input-group input-group-sm">

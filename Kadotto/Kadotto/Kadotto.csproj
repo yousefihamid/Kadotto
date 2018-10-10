@@ -248,6 +248,7 @@
     <Content Include="Scripts\Kadotto\Account\VerifyCode.js" />
     <Content Include="Scripts\Kadotto\Account\SendCode.js" />
     <Content Include="Scripts\Kadotto\Account\Login.js" />
+    <Content Include="Scripts\Kadotto\Base\Kaadoto.js" />
     <Content Include="Scripts\Kadotto\Box\BoxList.js" />
     <Content Include="Scripts\Kadotto\Box\BoxDetails.js" />
     <Content Include="Scripts\Kadotto\Customer\CustomerDetails.js" />
