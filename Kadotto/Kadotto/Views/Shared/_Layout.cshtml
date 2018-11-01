@@ -6,31 +6,67 @@
     <meta charset="utf-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no" />
     <meta name="author" content="Sazeh Consultants" />
-    <meta name="description" content="Sazeh Consultants Engineering and Construction, Sazeh is involved in Engineering, Procurement, Construction and Commissioning of Oil and Gas industries both onshore and offshore as well as industrial plants." />
-    <meta name="keywords" content="sazeh consultants engineering construction oil gas petrochemical industrial design contractors, Sazeh, Iran, Oil, Gas, Engineering, Construction, Procurement, Management, Petrochemical, Industries, Contractor, Refinery, Process, Piping, EPC, pmbok, Contractor, Yaghmai, Payvar, Mesbah, Shaibani, Hosseini, Farzad" />
+    <meta name="description" content="Kaadoto" />
+    <meta name="keywords" content="Gift" />
+
+    @Styles.Render("~/assets/css-css")
+    @Styles.Render("~/assets/js/plugins-css")
+
+    @Scripts.Render("~/assets/js/pluginsjs")
+    @Scripts.Render("~/assets/js/plugins/revolution/jsjs")
+    @Scripts.Render("~/assets/js/plugins/revolution/js/extensionsjs")
+    @Scripts.Render("~/assets/jsjs")
 
     <link rel="shortcut icon" href="~/Content/Images/favicon.ico" />
-    <link href="~/Content/Styles/bootstrap.min.css" rel="stylesheet" />
-    <link href="https://fonts.googleapis.com/css?family=Roboto" rel="stylesheet" />
-    <link href="https://fonts.googleapis.com/css?family=Italianno" rel="stylesheet">
+    <link href='https://fonts.googleapis.com/css?family=Lato:400,100,300,700,900' rel='stylesheet' type='text/css'>
+    <link href='https://fonts.googleapis.com/css?family=Merriweather:400,300,700,900' rel='stylesheet' type='text/css'>
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/font-awesome/4.4.0/css/font-awesome.min.css">
+
+    @*<link href="~/Content/Styles/bootstrap.min.css" rel="stylesheet" />
+    <link href='https://fonts.googleapis.com/css?family=Lato:400,100,300,700,900' rel='stylesheet' type='text/css'>
+    <link href='https://fonts.googleapis.com/css?family=Merriweather:400,300,700,900' rel='stylesheet' type='text/css'>
     <link href="~/Content/Styles/animate.min.css" rel="stylesheet" />
     <link href="~/Content/Styles/owl.carousel.min.css" rel="stylesheet" />
     <link href="~/Content/Styles/owl.theme.default.min.css" rel="stylesheet" />
     <link href="~/Content/Styles/twitter-typeahead.css" rel="stylesheet" />
-    <link href="~/Content/Styles/StyleSheet.css" rel="stylesheet" />
+    <link href="~/Content/Styles/main.css" rel="stylesheet" />
+    <link href="~/Content/Styles/settings.css" rel="stylesheet" />
+    <link href="~/Content/Styles/layers.css" rel="stylesheet" />
+    <link href="~/Content/Styles/navigation.css" rel="stylesheet" />
+    *@
 
-    <script src="~/Scripts/General/jquery-3.3.1.min.js"></script>
+
+    @*<script src="~/Scripts/General/jquery-3.3.1.min.js"></script>
     <script src="~/Scripts/General/jquery.cookie.min.js"></script>
     <script src="~/Scripts/General/bootstrap.min.js"></script>
     <script src="~/Scripts/General/jquery.validate.min.js"></script>
     <script src="~/Scripts/General/validator.min.js"></script>
     <script src="~/Scripts/General/typeahead.bundle.js"></script>
+    <script src="~/Scripts/Core/swiper.min.js"></script>
     <script src="~/Scripts/Core/Ajax.Service.js"></script>
     <script src="~/Scripts/Core/Ajax.Models.Service.js"></script>
     <script src="~/Scripts/Core/utility.js"></script>
     <script src="~/Scripts/Core/Tools.js"></script>
     <script src="~/Scripts/Kadotto/Base/Kaadoto.js"></script>
-    <script>
+    <script src="~/Scripts/Plugins/revolution/jquery.themepunch.tools.min.js"></script>
+    <script src="~/Scripts/Plugins/revolution/jquery.themepunch.revolution.min.js"></script>
+
+    <script src="~/Scripts/Plugins/revolution/revolution.extension.video.min.js"></script>
+    <script src="~/Scripts/Plugins/revolution/revolution.extension.actions.min.js"></script>
+    <script src="~/Scripts/Plugins/revolution/revolution.extension.carousel.min.js"></script>
+    <script src="~/Scripts/Plugins/revolution/revolution.extension.kenburn.min.js"></script>
+    <script src="~/Scripts/Plugins/revolution/revolution.extension.layeranimation.min.js"></script>
+    <script src="~/Scripts/Plugins/revolution/revolution.extension.migration.min.js"></script>
+    <script src="~/Scripts/Plugins/revolution/revolution.extension.navigation.min.js"></script>
+    <script src="~/Scripts/Plugins/revolution/revolution.extension.parallax.min.js"></script>
+    <script src="~/Scripts/Plugins/revolution/revolution.extension.slideanims.min.js"></script>
+
+    <script src="~/Scripts/Core/modernizr-2.8.3-respond-1.4.2.min.js"></script>
+    <script src="~/Scripts/Core/parallax.min.js"></script>
+    <script src="~/Scripts/Core/scrollReveal.min.js"></script>
+    <script src="~/Scripts/Core/bootstrap-dropdownhover.min.js"></script>
+    <script src="~/Scripts/Core/main.js"></script>*
+    @*<script>
         $(document).ready(function () {
 
             $('.menu_button_container ').on("click", function () {
@@ -45,193 +81,348 @@
                 });
             }
         });
-    </script>
-    <script src="~/Scripts/Core/owl.carousel.min.js"></script>
+    </script>*@
+    @*<script src="~/Scripts/Core/owl.carousel.min.js"></script>*@
     @RenderSection("HeaderSection", false)
 </head>
 <body>
-    <div id="form1">
-        <div class="header">
-            <div class="container">
-                <div class="nav_top hidden-xs">
-                    <a class="sazeh_top_logo" href="/Home/Index">
-                        
-                    </a>
-
-                    <div class="sazeh_text_animated">
-                        <div>Kadotto</div>
-                        <div>
-                            <span></span>
-                        </div>
-                    </div>
-                    @RenderSection("MenuSection")
-                </div>
-                <div class="navbar_menu">
-                    <nav class="navbar navbar-inverse">
-                        <div class="">
-                            <div class="navbar-header">
-                                <div class="navbar_xs_logo">
-                                    <a class="" href="/Home/Index">
-                                       
-                                    </a>
-                                </div>
-
-                                <button type="button" class="menu_button_container navbar-toggle collapsed" data-toggle="collapse" data-target="#myNavbar">
-                                    <div class="hamburger hamburger--spin">
-                                        <div class="hamburger-box">
-                                            <div class="hamburger-inner"></div>
-                                        </div>
-                                    </div>
-                                </button>
-
-                            </div>
-                            <div class="collapse navbar-collapse" id="myNavbar">
-
-                                <div class="navbar-form navbar-right visible-xs">
-                                    <div class="sazeh_text_xs">
-                                        <span> Kadotto</span><span> </span>
-
-                                    </div>
-                                    <div class="clearfix">
-
-                                    </div>
-                                    <div>
-                                        <div class="input-group input-group-sm">
-                                            <input id="SearchFilterMobile" type="text" class="form-control SearchFilter" placeholder="Search" />
-                                            <div class="input-group-btn">
-                                                <button class="btn btn-default" type="button" onclick="$.Project.Search()">
-                                                    <i class="glyphicon glyphicon-search"></i>
-                                                </button>
-                                            </div>
-                                        </div>
-                                    </div>
-
-                                </div>
-                                <ul class="nav navbar-nav">
-                                    <li class="active"><a href="/Home/Index">Home</a></li>
-                                    <li><a href="/Home/About">About</a></li>
-                                    <li><a href="/Home/Contact">Contact</a></li>
-                                    <li class="loginMenu"><a href="/Account/Login">Log In</a></li>
-                                    <li class="registerMenu"><a href="/Account/SendCode">Register</a></li>
-                                    <li class="adminMenu hidden">
-                                        <a class="dropdown-toggle" data-toggle="dropdown" href="#">
-                                            Admin
-                                            <span class="caret"></span>
-                                        </a>
-                                        <ul class="dropdown-menu">
-                                            <li><a href="/Box/Index">Box</a></li>
-                                            <li><a href="/Product/Index">Product</a></li>
-                                            <li><a href="/Partition/Index">Partition</a></li>
-                                            <li><a href="/Customer/Index">Customer</a></li>
-                                        </ul>
-                                    </li>
-                                </ul>
-                                <div class="navbar-form navbar-right hidden-xs">
-                                    <div class="input-group input-group-sm">
-                                        <input id="SearchFilter" type="text" class="form-control SearchFilter" placeholder="Search" />
-                                        <div class="input-group-btn">
-                                            <button class="btn btn-default" type="button" onclick="$.Project.Search()">
-                                                <i class="glyphicon glyphicon-search"></i>
-                                            </button>
-                                        </div>
-                                    </div>
-                                </div>
-                            </div>
-                        </div>
-                    </nav>
-                </div>
-            </div>
-
-        </div>
-        <div class="main">
-            @RenderBody()
-        </div>
-        @RenderSection("FooterSection")
-        <!-- Modal -->
-        <div id="myModal" class="modal fade custom_modal" role="dialog">
-            <div class="modal-dialog">
-
-                <!-- Modal content-->
-                <div class="modal-content">
-                    <div class="modal-header">
-                        <button type="button" class="close" data-dismiss="modal">&times;</button>
-                        <h4 class="modal-title">Error</h4>
-                    </div>
-                    <div class="modal-body">
-                        <p>Some text in the modal.</p>
-                    </div>
-                    <div class="modal-footer">
-                        <button type="button" class="btn btn_general" data-dismiss="modal">&nbsp Ok &nbsp</button>
-                    </div>
-                </div>
-
-            </div>
-        </div>
-        <div class="container_message">
-
-        </div>
-        <div class="hidden">
-            <div class="alert alert-success submit_resume_success alert-dismissible fadeInUp animated fade in">
-                <span class="sign_alert sign_success">
-                    <span class="glyphicon glyphicon-ok"></span>
-                </span>
-                Dear
-                <span class="alertMessage"></span><span>,</span>
-                <br />
-                Your resume has been registered.<br />
-                Thank you for applying.
-                <a href="#" class="close" data-dismiss="alert" aria-label="close">OK</a>
-
-            </div>
-            <div class="alert alert-danger submit_resume_success alert-dismissible fadeInUp animated fade in">
-                <span class="sign_alert sign_success">
-                    <span class="glyphicon glyphicon-remove"></span>
-                </span>
-                Error occured. Please try again.
-                <a href="#" class="close" data-dismiss="alert" aria-label="close">OK</a>
-
-            </div>
-
-        </div>
-        <div class="footer">
-            <div class="container">
-                <div class="row">
-                    <div class="col-sm-4">
-                        <div class="footer_left">
-                            
-
-                        </div>
-
-                    </div>
-                    <div class="col-sm-8">
-                        <div class="footer_right">
-                            <span class="footer_text">
-                                <span class="glyphicon glyphicon-earphone"></span>
-                            </span>
-                            <br />
-
-                            <span class="footer_text">
-                                <span class="glyphicon glyphicon-print"></span>
-                            </span>
-                            <br />
-
-                            <span class="footer_text">
-                                <span class="glyphicon glyphicon-envelope"></span>
-                            </span>
-                            <br />
-                            <span class="footer_text copyright">
-                               <br />
-                                <span class="footer_links">|&nbsp;<a href="/Sitemap">Sitemap</a>&nbsp;|<a href="/Policy/Cookie">&nbsp;Cookie Policy</a>&nbsp;|<a href="/Policy/Privacy">&nbsp;Privacy Policy</a>&nbsp;|&nbsp;<a href="/Policy/TermsOfService">Terms of Service</a>&nbsp;|</span>
-                            </span>
-                            <br />
-
-                        </div>
-
-                    </div>
-                </div>
+    <!--[if lt IE 8]>
+        <p class="browserupgrade">You are using an <strong>outdated</strong> browser. Please <a href="http://browsehappy.com/">upgrade your browser</a> to improve your experience.</p>
+    <![endif]-->
+    <!-- Loader Start -->
+    <div id="preloader">
+        <div class="preloader-container">
+            <div class="sk-folding-cube">
+                <div class="sk-cube1 sk-cube"></div>
+                <div class="sk-cube2 sk-cube"></div>
+                <div class="sk-cube4 sk-cube"></div>
+                <div class="sk-cube3 sk-cube"></div>
             </div>
         </div>
     </div>
+    <!-- End Loader Start -->
+    <!-- Top Bar Start -->
+    <div class="ws-topbar">
+        <div class="pull-left">
+            <div class="ws-topbar-message hidden-xs">
+                <p>Free Shipping on orders over <span>50$ in USA</span></p>
+            </div>
+        </div>
+        <div class="pull-right">
+            <!-- Shop Menu -->
+            <ul class="ws-shop-menu">
+                <!-- Account -->
+                <li class="ws-shop-account">
+                    <a href="my-account.html" class="btn btn-sm">My Account</a>
+                </li>
+
+                <!-- Cart -->
+                <li class="ws-shop-cart">
+                    <a href="#x" class="btn btn-sm">Cart (2)</a>
+                    <!-- Cart Popover -->
+                    <div class="ws-shop-minicart">
+                        <div class="minicart-content">
+                            <!-- Added Items -->
+                            <ul class="minicart-content-items clearfix">
+                                <!-- Item -->
+                                <li class="media">
+                                    <div class="media-left">
+                                        <!-- Image -->
+                                        <a href="#">
+                                            <img src="Content/Images/works/abstract/5.jpg" class="media-object" alt="Alternative Text">
+                                        </a>
+                                    </div>
+
+                                    <div class="minicart-content-details media-body">
+                                        <!-- Title -->
+                                        <h3><a href="#">Pinning Moon</a></h3>
+                                        <!-- Price -->
+                                        <span class="minicart-content-price">$25.00</span>
+                                    </div>
+                                    <!-- Remove -->
+                                    <span class="minicart-content-remove"><a href="#"><i class="fa fa-times"></i></a></span>
+                                </li>
+                                <!-- Item -->
+                                <li class="media">
+                                    <div class="media-left">
+                                        <!-- Image -->
+                                        <a href="#">
+                                            <img src="Content/Images/works/illustrated/4.jpg" class="media-object" alt="Alternative Text">
+                                        </a>
+                                    </div>
+
+                                    <div class="minicart-content-details media-body">
+                                        <!-- Title -->
+                                        <h3><a href="#">Arkose Factor</a></h3>
+                                        <!-- Price -->
+                                        <span class="minicart-content-price">$25.00</span>
+                                    </div>
+                                    <!-- Remove -->
+                                    <span class="minicart-content-remove"><a href="#"><i class="fa fa-times"></i></a></span>
+                                </li>
+                            </ul>
+                            <!-- Subtotal -->
+                            <div class="minicart-content-total">
+                                <h3>Subtotal: $50.00</h3>
+                            </div>
+                            <!-- Checkout -->
+                            <div class="ws-shop-menu-checkout">
+                                <div class="ws-shop-viewcart pull-left">
+                                    <a href="#x" class="btn btn-sm">View Cart</a>
+                                </div>
+                                <div class="ws-shop-checkout pull-right">
+                                    <a href="#x" class="btn btn-sm">Checkout</a>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    <!-- End Cart Popover -->
+                </li>
+            </ul>
+        </div>
+    </div>
+    <!-- Top Bar End -->
+    <!-- Header Start -->
+    <header class="ws-header ws-header-transparent">
+
+        <!-- Navbar -->
+        <nav class="navbar ws-navbar navbar-default">
+            <div class="container">
+                <div class="navbar-header">
+                    <button type="button" class="navbar-toggle collapsed" data-toggle="collapse" data-target="#bs-example-navbar-collapse-1" aria-expanded="false">
+                        <span class="sr-only">Toggle navigation</span>
+                        <span class="icon-bar"></span>
+                        <span class="icon-bar"></span>
+                        <span class="icon-bar"></span>
+                    </button>
+                </div>
+                <!-- Logo -->
+                <div class="ws-logo ws-center">
+                    <a href="index.html">
+                        <img src="Content/Images/logo-white.png" alt="Alternative Text" class="img-responsive">
+                    </a>
+                </div>
+
+                <div class="collapse navbar-collapse" id="bs-example-navbar-collapse-1">
+                    <ul class="nav navbar-nav navbar-left">
+                        <li class="dropdown">
+                            <a href="#x" class="dropdown-toggle" data-toggle="dropdown" data-hover="dropdown" data-animations="fadeIn">Home <span class="caret"></span></a>
+                            <ul class="dropdown-menu">
+                                <li><a href="index.html">Parallax Image</a></li>
+                                <li><a href="slider-fullwidth.html">Slider FullWidth</a></li>
+                                <li><a href="slider-fullscreen.html">Slider FullScreen</a></li>
+                                <li><a href="3d-parallax.html">3D Parallax Hero</a></li>
+                            </ul>
+                        </li>
+                        <li><a href="about.html">About</a></li>
+                        <li class="dropdown">
+                            <a href="#x" class="dropdown-toggle" data-toggle="dropdown" data-hover="dropdown" data-animations="fadeIn">Shop <span class="caret"></span></a>
+                            <ul class="dropdown-menu">
+                                <li><a href="shop.html">Default Shop Page</a></li>
+                                <li><a href="single-product.html">Single Product</a></li>
+                                <li><a href="shopping-cart.html">Shopping Cart</a></li>
+                                <li><a href="my-account.html">My Account / Register</a></li>
+                                <li><a href="checkout.html">Checkout</a></li>
+                            </ul>
+                        </li>
+                    </ul>
+                    <ul class="nav navbar-nav navbar-right">
+                        <li class="dropdown">
+                            <a href="#x" class="dropdown-toggle" data-toggle="dropdown" data-hover="dropdown" data-animations="fadeIn">Pages <span class="caret"></span></a>
+                            <ul class="dropdown-menu">
+                                <li><a href="index.html">Header Style 1</a></li>
+                                <li><a href="second-header.html">Header Style 2</a></li>
+                                <li><a href="third-header.html">Header Style 3</a></li>
+                                <li><a href="faq.html#shipping">Shipping &amp; Return</a></li>
+                                <li><a href="faq.html#privacy">Privacy Policy</a></li>
+                                <li><a href="faq.html">F.A.Q</a></li>
+                            </ul>
+                        </li>
+                        <li><a href="journal.html">Journal</a></li>
+                        <li><a href="contact.html">Contact</a></li>
+                    </ul>
+                </div>
+            </div>
+        </nav>
+    </header>
+    <!-- End Header -->
+    @RenderBody()
+    @RenderSection("FooterSection")
+    <!-- Kaadoto -->
+    <div id="myModal" class="modal fade custom_modal" role="dialog">
+        <div class="modal-dialog">
+
+            <!-- Modal content-->
+            <div class="modal-content">
+                <div class="modal-header">
+                    <button type="button" class="close" data-dismiss="modal">&times;</button>
+                    <h4 class="modal-title">Error</h4>
+                </div>
+                <div class="modal-body">
+                    <p>Some text in the modal.</p>
+                </div>
+                <div class="modal-footer">
+                    <button type="button" class="btn btn_general" data-dismiss="modal">&nbsp Ok &nbsp</button>
+                </div>
+            </div>
+
+        </div>
+    </div>
+    <div class="container_message">
+
+    </div>
+    <div class="hidden">
+        <div class="alert alert-success submit_resume_success alert-dismissible fadeInUp animated fade in">
+            <span class="sign_alert sign_success">
+                <span class="glyphicon glyphicon-ok"></span>
+            </span>
+            Dear
+            <span class="alertMessage"></span><span>,</span>
+            <br />
+            Your resume has been registered.<br />
+            Thank you for applying.
+            <a href="#" class="close" data-dismiss="alert" aria-label="close">OK</a>
+
+        </div>
+        <div class="alert alert-danger submit_resume_success alert-dismissible fadeInUp animated fade in">
+            <span class="sign_alert sign_success">
+                <span class="glyphicon glyphicon-remove"></span>
+            </span>
+            Error occured. Please try again.
+            <a href="#" class="close" data-dismiss="alert" aria-label="close">OK</a>
+
+        </div>
+
+    </div>
+    <!-- Kaadoto -->
+
+    <!-- Instagram Content -->
+    <section id="ws-instagram-section">
+        <div class="container">
+            <div class="row vertical-align">
+                <!-- Instagram Information -->
+                <div class="col-sm-3">
+                    <div class="ws-instagram-header">
+                        <h3>Instagram</h3>
+                        <br>
+                        <a href="https://www.instagram.com/" target="_blank" class="ws-instagram-link"> @@artday</a>
+                        <p>Lorem ipsum dolor sit amet, consectetuer adipiscing elit, sed diam nonummy.</p>
+                    </div>
+                </div>
+                <!-- Instagram Item -->
+                <div class="col-sm-3 ws-instagram-item" data-sr='wait 0.1s, ease-in 20px'>
+                    <a href="https://www.instagram.com/" target="_blank">
+                        <img src="Content/Images/journal/1.jpg" alt="Alternative Text" class="img-responsive">
+                    </a>
+                </div>
+                <!-- Instagram Item -->
+                <div class="col-sm-3 ws-instagram-item" data-sr='wait 0.3s, ease-in 20px'>
+                    <a href="https://www.instagram.com/" target="_blank">
+                        <img src="Content/Images/journal/4.jpg" alt="Alternative Text" class="img-responsive">
+                    </a>
+                </div>
+                <!-- Instagram Item -->
+                <div class="col-sm-3 ws-instagram-item" data-sr='wait 0.5s, ease-in 20px'>
+                    <a href="https://www.instagram.com/" target="_blank">
+                        <img src="Content/Images/journal/8.jpg" alt="Alternative Text" class="img-responsive">
+                    </a>
+                </div>
+            </div>
+        </div>
+    </section>
+    <!-- End Instagram Content -->
+    <!-- Subscribe Section -->
+    <section class="ws-subscribe-section">
+        <div class="container">
+            <div class="row">
+                <!-- Subscribe Content -->
+                <div class="ws-subscribe-content text-center clearfix">
+                    <div class="col-sm-8 col-sm-offset-2">
+                        <h3>Sign up for the newsletter</h3>
+                        <div class="ws-separator"></div>
+                        <!-- Form -->
+                        <form class="form-inline">
+                            <div class="form-group">
+                                <input type="email" class="form-control" placeholder="Enter your email">
+                            </div>
+                            <!-- Button -->
+                            <a class="btn ws-btn-subscribe">Subscribe</a>
+                        </form>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+    <!-- End Subscribe Section -->
+    <!-- Footer Start -->
+    <footer class="ws-footer">
+        <div class="container">
+            <div class="row">
+                <!-- About -->
+                <div class="col-sm-6 ws-footer-col">
+                    <h3>About Us</h3>
+                    <div class="ws-footer-separator"></div>
+                    <div class="ws-footer-about">
+                        <p>We are a family of creators – close knit and a little crazy – handcrafting goods at our workshop New York, USA. We make beautiful products from quality materials because believe each one is a representation of who we are close.</p>
+                    </div>
+                </div>
+                <!-- Support Links -->
+                <div class="col-sm-2 ws-footer-col">
+                    <h3>Support</h3>
+                    <div class="ws-footer-separator"></div>
+                    <ul>
+                        <li><a href="#x">Shipping &amp; Return</a></li>
+                        <li><a href="#x">Privacy Policy</a></li>
+                        <li><a href="#x">F.A.Q</a></li>
+                        <li><a href="#x">Contact Us</a></li>
+                    </ul>
+                </div>
+                <!-- Social Links -->
+                <div class="col-sm-2 ws-footer-col">
+                    <h3>Socials</h3>
+                    <div class="ws-footer-separator"></div>
+                    <ul class="ws-footer-social">
+                        <li><a href="#x"><i class="fa fa-facebook-square fa-lg"></i> Facebook</a></li>
+                        <li><a href="#x"><i class="fa fa-twitter fa-lg"></i> Twitter</a></li>
+                        <li><a href="#x"><i class="fa fa-instagram fa-lg"></i> Instagram</a></li>
+                        <li><a href="#x"><i class="fa fa-pinterest fa-lg"></i> Pinterest</a></li>
+                    </ul>
+                </div>
+                <!-- Shop -->
+                <div class="col-sm-2 ws-footer-col">
+                    <h3>Shop</h3>
+                    <div class="ws-footer-separator"></div>
+                    <ul>
+                        <li><a href="#x">Journals</a></li>
+                        <li><a href="#x">Abstract Prints</a></li>
+                        <li><a href="#x">Illustrated Prints</a></li>
+                        <li><a href="#x">Greeting Cards</a></li>
+                    </ul>
+                </div>
+
+            </div>
+        </div>
+    </footer>
+    <!-- Footer End -->
+    <!-- Footer Bar Start -->
+    <div class="ws-footer-bar">
+        <div class="container">
+            <!-- Copyright -->
+            <div class="pull-left">
+                <p>Handcrafted with love &copy; 2015 All rights reserved.</p>
+            </div>
+            <!-- Payments -->
+            <div class="pull-right">
+                <ul class="ws-footer-payments">
+                    <li><i class="fa fa-cc-visa fa-lg"></i></li>
+                    <li><i class="fa fa-cc-paypal fa-lg"></i></li>
+                    <li><i class="fa fa-cc-mastercard fa-lg"></i></li>
+                </ul>
+            </div>
+        </div>
+    </div>
+    <!-- Footer Bar End -->
+
     <div class="policy_alert hidden">
         <div class="alert alert-dismissible fade in">
             <a href="#" class="close PolicyClose" data-dismiss="alert" aria-label="close">×</a>

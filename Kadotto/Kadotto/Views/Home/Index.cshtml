@@ -1,489 +1,468 @@
-﻿@{
+﻿@using Common.Core;
+
+@{
     ViewBag.Title = "Kaadoto";
     Layout = "~/Views/Shared/_LayoutHome.cshtml";
 }
 
-<script>
-        $(document).ready(function () {
-            $('.areas_items_carousel').owlCarousel({
-                loop: false,
-                dots: false,
-                margin: 20,
-                responsiveClass: true,
-                responsive: {
-                    0: {
-                        items: 1,
-                        nav: true
-                    },
-                    300: {
-                        items: 2,
-                        nav: false
-                    },
-                    450: {
-                        items: 3,
-                        nav: false
-                    },
-                    600: {
-                        items: 4,
-                        nav: false
-                    },
-                    1000: {
-                        items: 6,
-                        nav: true,
-                        loop: false
-                    }
-                }
-            });
-            $('.homepage-slide-carousel').owlCarousel({
-                animateOut: 'fadeOut',
-                animateIn: 'fadeIn',
-                items: 1,
-                margin: 0,
-                stagePadding: 0,
-                smartSpeed: 400,
-                autoplay: true,
-                autoplayTimeout: 4000,
-                autoplayHoverPause: true,
-                loop: true
-            });
-        });
-</script>
-
-<div class="section homepage_banner ">
-    <div class="container banner_welcome_text_wrapper visible-sm visible-md visible-lg">
-        <div class="banner_welcome_text">
-
-            <p>
-                Sazeh is a privately owned independent joint stock company founded in Iran in 1970, operating for over @ViewBag.Year years in a wide range of industrial and urban projects.
-            </p>
-            <p>
-                Sazeh is involved in engineering, procurement, construction, and commissioning of oil and gas industries both onshore and offshore as well as industrial plants.
-
-            </p>
-            <p>
-                Sazeh executes EPC projects on a lump sum turn-key basis and has the ability to integrate engineering, procurement, and construction to deliver an overall plant.
-            </p>
-        </div>
-    </div>
-
-    <div class="homepage-slide-carousel owl-carousel owl-theme">
-        <div class="banner_wrapper banner_first">
-            <div class="">
-                @* <img src="~/Content/Images/banner_bg.png" alt="Nature" class="img-responsive">*@
+<!-- Hero Content -->
+<div id="ws-hero-fullscreen" class="rev_slider">
+    <ul>
+        <li data-transition="fade" data-easein="Power4.easeInOut" data-easeout="Power4.easeInOut" data-masterspeed="2000">
+            <!-- Background Image -->
+            <img src="Content/Images/backgrounds/hero-bg.jpg" alt="Alternative Text" data-bgposition="center center" data-bgfit="cover" data-bgrepeat="no-repeat" data-bgparallax="10">
+            <!-- Background Overlay -->
+            <div class="tp-caption"
+                 data-x="['center','center','center','center']" data-hoffset="['0','0','0','0']"
+                 data-y="['middle','middle','middle','middle']" data-voffset="['0','0','0','0']"
+                 data-width="full"
+                 data-height="full"
+                 data-whitespace="nowrap"
+                 data-transform_idle="o:1;"
+                 data-transform_in="opacity:0;s:1500;e:Power3.easeInOut;"
+                 data-transform_out="s:300;s:300;"
+                 data-start="750"
+                 data-basealign="slide"
+                 data-responsive_offset="on"
+                 data-responsive="off"
+                 style="z-index: 5;background-color:rgba(0, 0, 0, 0.40);border-color:rgba(0, 0, 0, 0.50);">
             </div>
-
-        </div>
-        <div class="banner_wrapper banner_second">
-            <div class="">
-                @*   <img src="~/Content/Images/banner_page_1.png" alt="Nature" class="img-responsive">*@
+            <!-- Layer -->
+            <div class="tp-caption ws-hero-title"
+                 data-x="['center','center','center','center']" data-hoffset="['0','0','0','0']"
+                 data-y="['middle','middle','middle','middle']" data-voffset="['0','0','0','1']"
+                 data-transform_in="y:[-100%];z:0;rX:0deg;rY:0;rZ:0;sX:1;sY:1;skX:0;skY:0;s:1500;e:Power3.easeInOut;"
+                 data-mask_in="x:0px;y:0px;"
+                 data-mask_out="x:0;y:0;"
+                 data-start="1000"
+                 data-responsive_offset="on"
+                 style="z-index: 6;">
+                <h1>A selection of creative <br class="rwd-break"> commissioned works.</h1>
             </div>
-
-        </div>
-        <div class="banner_wrapper banner_third">
-            <div class="">
-                @*  <img src="~/Content/Images/banner_page_2.png" alt="Nature" class="img-responsive">*@
+            <!-- Layer -->
+            <div class="tp-caption ws-hero-description"
+                 data-x="['center','center','center','center']" data-hoffset="['0','0','0','0']"
+                 data-y="['middle','middle','middle','middle']" data-voffset="['-72','-72','-72','-48']"
+                 data-transform_in="y:[-100%];z:0;rX:0deg;rY:0;rZ:0;sX:1;sY:1;skX:0;skY:0;s:1500;e:Power3.easeInOut;"
+                 data-mask_in="x:0px;y:0px;"
+                 data-mask_out="x:0;y:0;"
+                 data-start="1000"
+                 data-responsive_offset="on"
+                 style="z-index: 7;">
+                <h4>Spanning the fields of illustration, lettering &amp; fine art.</h4>
             </div>
-
-        </div>
-        <div class="banner_wrapper banner_forth">
-            <div class="">
-                @*   <img src="~/Content/Images/banner_page_3.png" alt="Nature" class="img-responsive">*@
+            <!-- Button -->
+            <div class="tp-caption"
+                 data-x="['center','center','center','center']" data-hoffset="['0','0','0','0']"
+                 data-y="['middle','middle','middle','middle']" data-voffset="['92','92','92','76']"
+                 data-transform_in="y:50px;opacity:0;s:1500;e:Power4.easeInOut;"
+                 data-start="1000"
+                 data-responsive_offset="on"
+                 data-responsive="off"
+                 style="z-index: 8;">
+                <a class="btn ws-big-btn" href="shop.html">View Collention</a>
             </div>
-
-        </div>
-        <div class="banner_wrapper banner_fifth">
-            <div class="">
-                @*<img src="~/Content/Images/banner_page_4.png" alt="Nature" class="responsive">*@
-            </div>
-
-        </div>
-    </div>
-
-
+        </li>
+    </ul>
+    <div class="tp-static-layers"></div>
+    <div class="tp-bannertimer tp-bottom" style="visibility: hidden !important;"></div>
 </div>
-<div class="section home_xs_welcome visible-xs">
+<!-- Hero Content -->
+<!-- About Section Start -->
+<section class="ws-about-section">
     <div class="container">
-
-        <div class="banner_welcome_text text-center">
-            <p>
-                Sazeh is a privately owned independent, joint stock company founded in Iran in 1970, operating for over 45 years in a wide range of industrial and urban projects.
-            </p>
-            <p>
-                Sazeh is involved in engineering, procurement, construction and commissioning of oil and gas industries both onshore and offshore as well as industrial plants.
-
-            </p>
-            <p>
-                Sazeh executes EPC projects on a lump sum turn-key basis and has the ability to integrate engineering, procurement and construction to deliver an overall plant.
-            </p>
+        <div class="row">
+            <!-- Description -->
+            <div class="ws-about-content clearfix">
+                <div class="col-sm-8 col-sm-offset-2">
+                    <h3>Made with Love</h3>
+                    <div class="ws-separator"></div>
+                    <p>We are a family of creators – close knit and a little crazy – handcrafting goods at our workshop  New York, USA. We make beautiful products from quality materials because believe each one is a representation of who we are close knit and a little crazy – handcrafting.</p>
+                </div>
+            </div>
+            <!-- Featured Collections -->
+            <div class="ws-featured-collections clearfix">
+                <!-- Item -->
+                <div class="col-sm-4 featured-collections-item">
+                    <a href="#x">
+                        <div class="thumbnail">
+                            <img src="Content/Images/backgrounds/abstract-bg.jpg" alt="Alternative Text">
+                            <div class="ws-overlay">
+                                <div class="caption">
+                                    <h3>Abstract Prints</h3>
+                                </div>
+                            </div>
+                        </div>
+                    </a>
+                </div>
+                <!-- Item -->
+                <div class="col-sm-4 featured-collections-item">
+                    <a href="#x">
+                        <div class="thumbnail">
+                            <img src="Content/Images/backgrounds/journal-bg.jpg" alt="Alternative Text">
+                            <div class="ws-overlay">
+                                <div class="caption">
+                                    <h3>Journals</h3>
+                                </div>
+                            </div>
+                        </div>
+                    </a>
+                </div>
+                <!-- Item -->
+                <div class="col-sm-4 featured-collections-item">
+                    <a href="#x">
+                        <div class="thumbnail">
+                            <img src="Content/Images/backgrounds/illustrated-bg.jpg" alt="Alternative Text">
+                            <div class="ws-overlay">
+                                <div class="caption">
+                                    <h3>Illustrated Prints</h3>
+                                </div>
+                            </div>
+                        </div>
+                    </a>
+                </div>
+            </div>
         </div>
     </div>
-
-</div>
-<div class="section home_areasofactivity">
+</section>
+<!-- About Section End -->
+<!-- New Arrivals Section -->
+<section class="ws-arrivals-section">
+    <div class="ws-works-title clearfix">
+        <div class="col-sm-12">
+            <h3>New Arrivals</h3>
+            <div class="ws-separator"></div>
+        </div>
+    </div>
+    <div id="ws-items-carousel">
+        <!-- Item -->
+        <div class="ws-works-item" data-sr='wait 0.1s, ease-in 20px'>
+            <a href="#">
+                <div class="ws-item-offer">
+                    <!-- Image -->
+                    <figure>
+                        <img src="Content/Images/works/abstract/5.jpg" alt="Alternative Text" class="img-responsive">
+                    </figure>
+                </div>
+                <div class="ws-works-caption text-center">
+                    <!-- Item Category -->
+                    <div class="ws-item-category">Abstract Prints</div>
+                    <!-- Title -->
+                    <h3 class="ws-item-title">Pinning Moon</h3>
+                    <div class="ws-item-separator"></div>
+                    <!-- Price -->
+                    <div class="ws-item-price"><del>$50.00</del> <ins>$25.00</ins></div>
+                </div>
+            </a>
+        </div>
+        <!-- Item -->
+        <div class="ws-works-item" data-sr='wait 0.3s, ease-in 20px'>
+            <a href="#">
+                <!-- Image -->
+                <figure>
+                    <img src="Content/Images/works/illustrated/4.jpg" alt="Alternative Text" class="img-responsive">
+                </figure>
+                <div class="ws-works-caption text-center">
+                    <!-- Item Category -->
+                    <div class="ws-item-category">Illustrated Prints</div>
+                    <!-- Title -->
+                    <h3 class="ws-item-title">Arkose Factor</h3>
+                    <div class="ws-item-separator"></div>
+                    <!-- Price -->
+                    <div class="ws-item-price">$150.00</div>
+                </div>
+            </a>
+        </div>
+        <!-- Item -->
+        <div class="ws-works-item" data-sr='wait 0.5s, ease-in 20px'>
+            <a href="#">
+                <!-- Image -->
+                <figure>
+                    <img src="Content/Images/works/abstract/6.jpg" alt="Alternative Text" class="img-responsive">
+                </figure>
+                <div class="ws-works-caption text-center">
+                    <!-- Item Category -->
+                    <div class="ws-item-category">Abstract Prints</div>
+                    <!-- Title -->
+                    <h3 class="ws-item-title">Interstellar</h3>
+                    <div class="ws-item-separator"></div>
+                    <!-- Price -->
+                    <div class="ws-item-price">$75.00</div>
+                </div>
+            </a>
+        </div>
+        <!-- Item -->
+        <div class="ws-works-item" data-sr='wait 0.7s, ease-in 20px'>
+            <a href="#">
+                <div class="ws-item-offer">
+                    <!-- Image -->
+                    <figure>
+                        <img src="Content/Images/works/journals/3.jpg" alt="Alternative Text" class="img-responsive">
+                    </figure>
+                </div>
+                <div class="ws-works-caption text-center">
+                    <!-- Item Category -->
+                    <div class="ws-item-category">Journal</div>
+                    <!-- Title -->
+                    <h3 class="ws-item-title">Rubby Hubby</h3>
+                    <div class="ws-item-separator"></div>
+                    <!-- Price -->
+                    <div class="ws-item-price">$53.00</div>
+                </div>
+            </a>
+        </div>
+        <!-- Item -->
+        <div class="ws-works-item">
+            <a href="#">
+                <div class="ws-item-offer">
+                    <!-- Image -->
+                    <figure>
+                        <img src="Content/Images/works/abstract/7.jpg" alt="Alternative Text" class="img-responsive">
+                    </figure>
+                </div>
+                <div class="ws-works-caption text-center">
+                    <!-- Item Category -->
+                    <div class="ws-item-category">Abstract Prints</div>
+                    <!-- Title -->
+                    <h3 class="ws-item-title">Pinning Moon</h3>
+                    <div class="ws-item-separator"></div>
+                    <!-- Price -->
+                    <div class="ws-item-price"><del>$50.00</del> <ins>$25.00</ins></div>
+                </div>
+            </a>
+        </div>
+        <!-- Item -->
+        <div class="ws-works-item">
+            <a href="#">
+                <div class="ws-item-offer">
+                    <!-- Image -->
+                    <figure>
+                        <img src="Content/Images/works/journals/4.jpg" alt="Alternative Text" class="img-responsive">
+                    </figure>
+                </div>
+                <div class="ws-works-caption text-center">
+                    <!-- Item Category -->
+                    <div class="ws-item-category">Abstract Prints</div>
+                    <!-- Title -->
+                    <h3 class="ws-item-title">Pinning Moon</h3>
+                    <div class="ws-item-separator"></div>
+                    <!-- Price -->
+                    <div class="ws-item-price"><del>$50.00</del> <ins>$25.00</ins></div>
+                </div>
+            </a>
+        </div>
+    </div>
+</section>
+<!-- End New Arrivals Section -->
+<!-- Work Collection Start  -->
+<section class="ws-works-section">
     <div class="container">
-
-        <div class="section_header">
-            <h2>Areas of Activity</h2>
-        </div>
-        <div class="areas_items_wrapper areas_items_carousel owl-carousel owl-theme">
-            <a href=@Url.Action("GetByExperience", "Project",new { Experience = "Oil_and_Gas_Production" })>
-                <div class="areas_item">
-                    <div class="areas_item_img">
-                        <img src="~/Content/Images/oil_&_gas_production.png" />
-                    </div>
-                    <hr />
-                    <div class="areas_item_text">
-                        <span>
-                            Oil & Gas
-                        </span>
-                        <br />
-                        <span>
-                            Production
-                        </span>
-                    </div>
+        <div class="row">
+            <div class="ws-works-title">
+                <div class="col-sm-12">
+                    <h3>Featured Products</h3>
+                    <div class="ws-separator"></div>
                 </div>
-            </a>
-            <a href=@Url.Action("GetByExperience", "Project",new { Experience = "Gas_Processing" })>
-                <div class="areas_item">
-                    <div class="areas_item_img">
-                        <img src="~/Content/Images/gas_processing.png" />
+            </div>
+            <!-- Item -->
+            <div class="col-sm-6 col-md-4 ws-works-item" data-sr='wait 0.1s, ease-in 20px'>
+                <a href="#">
+                    <div class="ws-item-offer">
+                        <!-- Image -->
+                        <figure>
+                            <img src="Content/Images/works/abstract/1.jpg" alt="Alternative Text" class="img-responsive">
+                        </figure>
+                        <!-- Sale Caption -->
+                        <div class="ws-item-sale">
+                            <span>Sale</span>
+                        </div>
                     </div>
-                    <hr />
-                    <div class="areas_item_text">
-                        <span>
-                            Gas
-                        </span>
-                        <br />
-                        <span>
-                            Processing
-                        </span>
+                    <div class="ws-works-caption text-center">
+                        <!-- Item Category -->
+                        <div class="ws-item-category">Abstract Prints</div>
+                        <!-- Title -->
+                        <h3 class="ws-item-title">Pinning Moon</h3>
+                        <div class="ws-item-separator"></div>
+                        <!-- Price -->
+                        <div class="ws-item-price"><del>$50.00</del> <ins>$25.00</ins></div>
                     </div>
-                </div>
-            </a>
-            <a href=@Url.Action("GetByExperience", "Project",new { Experience = "Petroleum_Refining" })>
-                <div class="areas_item">
-                    <div class="areas_item_img">
-                        <img src="~/Content/Images/petroleum_refining.png" />
+                </a>
+            </div>
+            <!-- Item -->
+            <div class="col-sm-6 col-md-4 ws-works-item" data-sr='wait 0.3s, ease-in 20px'>
+                <a href="#">
+                    <!-- Image -->
+                    <figure>
+                        <img src="Content/Images/works/illustrated/1.jpg" alt="Alternative Text" class="img-responsive">
+                    </figure>
+                    <div class="ws-works-caption text-center">
+                        <!-- Item Category -->
+                        <div class="ws-item-category">Illustrated Prints</div>
+                        <!-- Title -->
+                        <h3 class="ws-item-title">Arkose Factor</h3>
+                        <div class="ws-item-separator"></div>
+                        <!-- Price -->
+                        <div class="ws-item-price">$150.00</div>
                     </div>
-                    <hr />
-                    <div class="areas_item_text">
-                        <span>
-                            Petroleum
-
-                        </span>
-                        <br />
-                        <span>
-                            Refining
-                        </span>
+                </a>
+            </div>
+            <!-- Item -->
+            <div class="col-sm-6 col-md-4 ws-works-item" data-sr='wait 0.5s, ease-in 20px'>
+                <a href="#">
+                    <!-- Image -->
+                    <figure>
+                        <img src="Content/Images/works/abstract/2.jpg" alt="Alternative Text" class="img-responsive">
+                    </figure>
+                    <div class="ws-works-caption text-center">
+                        <!-- Item Category -->
+                        <div class="ws-item-category">Abstract Prints</div>
+                        <!-- Title -->
+                        <h3 class="ws-item-title">Interstellar</h3>
+                        <div class="ws-item-separator"></div>
+                        <!-- Price -->
+                        <div class="ws-item-price">$75.00</div>
                     </div>
-                </div>
-            </a>
-            <a href=@Url.Action("GetByExperience", "Project",new { Experience = "Pipelines" })>
-                <div class="areas_item">
-                    <div class="areas_item_img">
-                        <img src="~/Content/Images/pipelines.png" />
+                </a>
+            </div>
+            <!-- Item -->
+            <div class="col-sm-6 col-md-4 ws-works-item" data-sr='wait 0.1s, ease-in 20px'>
+                <a href="#">
+                    <!-- Image -->
+                    <figure>
+                        <img src="Content/Images/works/abstract/3.jpg" alt="Alternative Text" class="img-responsive">
+                    </figure>
+                    <div class="ws-works-caption text-center">
+                        <!-- Item Category -->
+                        <div class="ws-item-category">Abstract Prints</div>
+                        <!-- Title -->
+                        <h3 class="ws-item-title">Lake House</h3>
+                        <div class="ws-item-separator"></div>
+                        <!-- Price -->
+                        <div class="ws-item-price">$33.00</div>
                     </div>
-                    <hr />
-                    <div class="areas_item_text">
-                        <span>
-                            Pipelines
-
-                        </span>
-                        <br />
-                        <span></span>
+                </a>
+            </div>
+            <!-- Item -->
+            <div class="col-sm-6 col-md-4 ws-works-item" data-sr='wait 0.3s, ease-in 20px'>
+                <a href="#">
+                    <!-- Image -->
+                    <figure>
+                        <img src="Content/Images/works/illustrated/2.jpg" alt="Alternative Text" class="img-responsive">
+                    </figure>
+                    <div class="ws-works-caption text-center">
+                        <!-- Item Category -->
+                        <div class="ws-item-category">Illustrated Prints</div>
+                        <!-- Title -->
+                        <h3 class="ws-item-title">Sorbetto</h3>
+                        <div class="ws-item-separator"></div>
+                        <!-- Price -->
+                        <div class="ws-item-price">$123.00</div>
                     </div>
-                </div>
-            </a>
-            <a href=@Url.Action("GetByExperience", "Project",new { Experience = "Offshore_Oil_and_Gas" })>
-                <div class="areas_item">
-                    <div class="areas_item_img">
-                        <img src="~/Content/Images/offshore_oil_and_gas_facilities.png" />
+                </a>
+            </div>
+            <!-- Item -->
+            <div class="col-sm-6 col-md-4 ws-works-item" data-sr='wait 0.5s, ease-in 20px'>
+                <a href="#">
+                    <div class="ws-item-offer">
+                        <!-- Image -->
+                        <figure>
+                            <img src="Content/Images/works/journals/1.jpg" alt="Alternative Text" class="img-responsive">
+                        </figure>
+                        <!-- Sale Caption -->
+                        <div class="ws-item-sale">
+                            <span>Sold</span>
+                        </div>
                     </div>
-                    <hr />
-                    <div class="areas_item_text">
-                        <span>
-                            Offshore Oil
-
-
-                        </span>
-                        <br />
-                        <span>and </span>
-                        <br />
-                        <span>
-                            Gas Facilities
-                        </span>
+                    <div class="ws-works-caption text-center">
+                        <!-- Item Category -->
+                        <div class="ws-item-category">Journal</div>
+                        <!-- Title -->
+                        <h3 class="ws-item-title">Rubby Hubby</h3>
+                        <div class="ws-item-separator"></div>
+                        <!-- Price -->
+                        <div class="ws-item-price">$53.00</div>
                     </div>
-                </div>
-            </a>
-            <a href=@Url.Action("GetByExperience", "Project",new { Experience = "Petrochemical_and_Chemical" })>
-                <div class="areas_item">
-                    <div class="areas_item_img">
-                        <img src="~/Content/Images/petrochemical_and_chemical_plants.png" />
+                </a>
+            </div>
+            <!-- Item -->
+            <div class="col-sm-6 col-md-4 ws-works-item" data-sr='wait 0.1s, ease-in 20px'>
+                <a href="#">
+                    <div class="ws-item-offer">
+                        <!-- Image -->
+                        <figure>
+                            <img src="Content/Images/works/illustrated/3.jpg" alt="Alternative Text" class="img-responsive">
+                        </figure>
+                        <!-- Sale Caption -->
+                        <div class="ws-item-sale">
+                            <span>Sale</span>
+                        </div>
                     </div>
-                    <hr />
-                    <div class="areas_item_text">
-                        <span>
-                            Petrochemical
-                        </span>
-                        <br />
-                        <span>
-                            and
-                        </span>
-                        <br />
-                        <span>
-                            Chemical Plants
-                        </span>
+                    <div class="ws-works-caption text-center">
+                        <!-- Item Category -->
+                        <div class="ws-item-category">Illustrated Prints</div>
+                        <!-- Title -->
+                        <h3 class="ws-item-title">Grey Mountains</h3>
+                        <div class="ws-item-separator"></div>
+                        <!-- Price -->
+                        <div class="ws-item-price"><del>$23.00</del> <ins>$10.00</ins></div>
                     </div>
-                </div>
-            </a>
-            <a href=@Url.Action("GetByExperience", "Project",new { Experience = "Power_Systems" })>
-                <div class="areas_item">
-                    <div class="areas_item_img">
-                        <img src="~/Content/Images/power_generation_and_transmission.png" />
+                </a>
+            </div>
+            <!-- Item -->
+            <div class="col-sm-6 col-md-4 ws-works-item" data-sr='wait 0.3s, ease-in 20px'>
+                <a href="#">
+                    <!-- Image -->
+                    <figure>
+                        <img src="Content/Images/works/journals/2.jpg" alt="Alternative Text" class="img-responsive">
+                    </figure>
+                    <div class="ws-works-caption text-center">
+                        <!-- Item Category -->
+                        <div class="ws-item-category">Journals</div>
+                        <!-- Title -->
+                        <h3 class="ws-item-title">Thinking Wood</h3>
+                        <div class="ws-item-separator"></div>
+                        <!-- Price -->
+                        <div class="ws-item-price">$23.00</div>
                     </div>
-                    <hr />
-                    <div class="areas_item_text">
-                        <span>
-                            Power
-                        </span>
-                        <br />
-                        <span>
-                            Generation and Transmission
-                        </span>
+                </a>
+            </div>
+            <!-- Item -->
+            <div class="col-sm-6 col-md-4 ws-works-item" data-sr='wait 0.5s, ease-in 20px'>
+                <a href="#">
+                    <!-- Image -->
+                    <figure>
+                        <img src="Content/Images/works/abstract/4.jpg" alt="Alternative Text" class="img-responsive">
+                    </figure>
+                    <div class="ws-works-caption text-center">
+                        <!-- Item Category -->
+                        <div class="ws-item-category">Abstract Prints</div>
+                        <!-- Title -->
+                        <h3 class="ws-item-title">Thinking Wood</h3>
+                        <div class="ws-item-separator"></div>
+                        <!-- Price -->
+                        <div class="ws-item-price">$23.00</div>
                     </div>
-                </div>
-            </a>
-            <a href=@Url.Action("GetByExperience", "Project",new { Experience = "Industrial_Plants" })>
-                <div class="areas_item">
-                    <div class="areas_item_img">
-                        <img src="~/Content/Images/industrial_plants.png" />
-                    </div>
-                    <hr />
-                    <div class="areas_item_text">
-                        <span>
-                            Industrial
-
-                        </span>
-                        <br />
-                        <span>
-                            Plants
-                        </span>
-                    </div>
-                </div>
-            </a>
-            <a href=@Url.Action("GetByExperience", "Project",new { Experience = "Pulp_and_Paper" })>
-                <div class="areas_item">
-                    <div class="areas_item_img">
-                        <img src="~/Content/Images/pulp_and_paper_agro_industry.png" />
-                    </div>
-                    <hr />
-                    <div class="areas_item_text">
-                        <span>
-                            Pulp and
-
-                        </span>
-                        <br />
-                        <span>
-                            Paper / Agro
-                        </span>
-                        <br />
-                        <span>
-                            Industry
-                        </span>
-                    </div>
-                </div>
-            </a>
-            <a href=@Url.Action("GetByExperience", "Project",new { Experience = "Architecture" })>
-                <div class="areas_item">
-                    <div class="areas_item_img">
-                        <img src="~/Content/Images/architecture.png" />
-                    </div>
-                    <hr />
-                    <div class="areas_item_text">
-                        <span>
-                            Architecture
-
-                        </span>
-                    </div>
-                </div>
-            </a>
-            <a href=@Url.Action("SeCity", "SoftwareEngineering")>
-                <div class="areas_item">
-                    <div class="areas_item_img">
-                        <img src="~/Content/Images/software_engineering.png" />
-                    </div>
-                    <hr />
-                    <div class="areas_item_text">
-                        <span>
-                            Systems
-                        </span>
-                        <br />
-                        <span>
-                            and
-                        </span>
-                        <br />
-                        <span>
-                            Software Engineering
-                        </span>
-                    </div>
-                </div>
-            </a>
+                </a>
+            </div>
         </div>
     </div>
-    <!-- Set up your HTML -->
-</div>
-
-<div class="section home_indicator_projects">
-    <div class="container">
-        <div class="section_header">
-            <h2>Signature Projects</h2>
-        </div>
-        <div class="indicator_projects_items_wrapper row">
-            <div class="col-lg-4 col-md-4 col-sm-6 col-xs-12">
-                <div class="indicator_projects_item">
-                    <div class="indicator_projects_item_img over_mask">
-                        <img src="~/Content/Images/Project/South_Pars_Gas_Field_Development_Phase_12/South_Pars_Gas_Field_Development_Phase_12(1).jpg" />
-                        <div class="mask white-slight">
-                        </div>
-                    </div>
-                    <div class="indicator_projects_item_text">
-                        <div class="indicator_projects_item_top">
-                            <span class="project_area">Gas Processing</span><br />
-                            <span class="project_title">
-                                South Pars Gas Field Development Phase 12
-                            </span>
-                        </div>
-
-                        <hr />
-                        <div class="project_footer">
-                            <a href=@Url.Action("Details", "Project",new { FolderName = "South_Pars_Gas_Field_Development_Phase_12" })>
-                                <span>Read More </span><span class="glyphicon glyphicon-chevron-right"></span>
-                            </a>
-                        </div>
+</section>
+<!-- Work Collection End  -->
+<!-- Call to Action Section -->
+<section class="ws-call-section">
+    <div class="ws-overlay">
+        <div class="ws-parallax-caption">
+            <div class="ws-parallax-holder">
+                <div class="col-sm-6 col-sm-offset-3">
+                    <h2>JOURNAL</h2>
+                    <div class="ws-separator"></div>
+                    <p>Our blog covering interesting stories around culture and design.<br>Lorem ipsum dolor sit amet, consectetuer adipiscing elit, sed diam nonummy.</p>
+                    <div class="ws-call-btn">
+                        <a href="#">Show all journal items</a>
                     </div>
                 </div>
             </div>
-            <div class="col-lg-4 col-md-4 col-sm-6 col-xs-12">
-                <div class="indicator_projects_item">
-                    <div class="indicator_projects_item_img over_mask">
-                        <img src="~/Content/Images/Project/Shazand_Imam_Khomeini_Refinery_Expansion_and_Upgrading/Shazand_Imam_Khomeini_Refinery_Expansion_and_Upgrading(1).jpg" />
-                        <div class="mask white-slight">
-                        </div>
-                    </div>
-                    <div class="indicator_projects_item_text">
-                        <div class="indicator_projects_item_top">
-                            <span class="project_area">Petroleum Refining</span><br />
-                            <span class="project_title">
-                                Shazand Imam Khomeini Refinery Expansion & Upgrading Project
-                            </span>
-                        </div>
-
-                        <hr />
-                        <div class="project_footer">
-                            <a href=@Url.Action("Details", "Project",new { FolderName = "Shazand_Imam_Khomeini_Refinery_Expansion_and_Upgrading" })>
-                                <span>Read More </span><span class="glyphicon glyphicon-chevron-right"></span>
-                            </a>
-                        </div>
-                    </div>
-                </div>
-            </div>
-            <div class="col-lg-4 col-md-4 col-sm-6 col-xs-12">
-                <div class="indicator_projects_item">
-                    <div class="indicator_projects_item_img over_mask">
-                        <img src="~/Content/Images/Project/PVC_Project_in_Bandar_Imam/PVC_Project_in_Bandar_Imam(1).jpg" />
-                        <div class="mask white-slight">
-                        </div>
-                    </div>
-                    <div class="indicator_projects_item_text">
-                        <div class="indicator_projects_item_top">
-                            <span class="project_area">Petrochemical and Chemical Plants</span><br />
-                            <span class="project_title">
-                                PVC Complex
-                            </span>
-                        </div>
-
-                        <hr />
-                        <div class="project_footer">
-                            <a href=@Url.Action("Details", "Project",new { FolderName = "PVC_Project_in_Bandar_Imam" })>
-                                <span>Read More </span><span class="glyphicon glyphicon-chevron-right"></span>
-                            </a>
-                        </div>
-                    </div>
-                </div>
-            </div>
-            <div class="col-lg-4 col-md-4 col-sm-6 col-xs-12">
-                <div class="indicator_projects_item">
-                    <div class="indicator_projects_item_img over_mask">
-                        <img src="~/Content/Images/Project/4th_Aromatics_Plant/4th_Aromatics_Plant(1).jpg" />
-                        <div class="mask white-slight">
-                        </div>
-                    </div>
-                    <div class="indicator_projects_item_text">
-                        <div class="indicator_projects_item_top">
-                            <span class="project_area">Petrochemical & Chemical</span><br />
-                            <span class="project_title">
-                                4th Aromatics Plant
-                            </span>
-                        </div>
-
-                        <hr />
-                        <div class="project_footer">
-                            <a href=@Url.Action("Details", "Project",new { FolderName = "4th_Aromatics_Plant" })>
-                                <span>Read More </span><span class="glyphicon glyphicon-chevron-right"></span>
-                            </a>
-                        </div>
-                    </div>
-                </div>
-            </div>
-            <div class="col-lg-4 col-md-4 col-sm-6 col-xs-12">
-                <div class="indicator_projects_item">
-                    <div class="indicator_projects_item_img over_mask">
-                        <img src="~/Content/Images/Project/Bid_Boland_II_Gas_Treating_Plant/Bid_Boland_II_Gas_Treating_Plant(1).jpg" />
-                        <div class="mask white-slight">
-                        </div>
-                    </div>
-                    <div class="indicator_projects_item_text">
-                        <div class="indicator_projects_item_top">
-                            <span class="project_area">Oil & Gas Production</span><br />
-                            <span class="project_title">
-                                Bid Boland II Gas Treating
-                            </span>
-                        </div>
-
-                        <hr />
-                        <div class="project_footer">
-                            <a href=@Url.Action("Details", "Project",new { FolderName = "Bid_Boland_II_Gas_Treating_Plant" })>
-                                <span>Read More </span><span class="glyphicon glyphicon-chevron-right"></span>
-                            </a>
-                        </div>
-                    </div>
-                </div>
-            </div>
-            <div class="col-lg-4 col-md-4 col-sm-6 col-xs-12">
-                <div class="indicator_projects_item">
-                    <div class="indicator_projects_item_img over_mask">
-                        <img src="~/Content/Images/Project/Renovation_of_Kharg_Terminals/Renovation_of_Kharg_Terminals(1).jpg" />
-                        <div class="mask white-slight">
-                        </div>
-                    </div>
-                    <div class="indicator_projects_item_text">
-                        <div class="indicator_projects_item_top">
-                            <span class="project_area">Oil & Gas Production</span><br />
-                            <span class="project_title">
-                                Renovation Of Kharg Terminals
-                            </span>
-                        </div>
-
-                        <hr />
-                        <div class="project_footer">
-                            <a href=@Url.Action("Details", "Project",new { FolderName = "Renovation_of_Kharg_Terminals" })>
-                                <span>Read More </span><span class="glyphicon glyphicon-chevron-right"></span>
-                            </a>
-                        </div>
-                    </div>
-                </div>
-            </div>
-            <div class="clearfix"></div>
         </div>
     </div>
-</div>
+</section>
+<!-- End Call to Action Section -->

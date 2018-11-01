@@ -1,4 +1,6 @@
-﻿using System;
+﻿using Common.Core;
+using Service.Core;
+using System;
 using System.Collections.Generic;
 using System.Linq;
 using System.Web;
@@ -10,6 +12,8 @@ namespace Kadotto.Controllers
     {
         public ActionResult Index()
         {
+            ViewBag.InterestedBoxes = new BoxService().GetAll();
+            ViewBag.SuggestedBoxes = new List<BoxDTO>();
             return View();
         }
 

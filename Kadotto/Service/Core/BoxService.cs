@@ -83,7 +83,8 @@ namespace Service.Core
                         BoxPlaceCount = a.BoxPlaceCount,
                         Description = a.Description,
                         DisplayOrder = a.DisplayOrder,
-                        Deleted = a.Deleted
+                        Deleted = a.Deleted,
+                        ImageName=a.ImageName
                     }).ToList();
             }
             return Result;
@@ -103,6 +104,7 @@ namespace Service.Core
                     Result.BoxPlaceCount = Box.BoxPlaceCount;
                     Result.Description = Box.Description;
                     Result.DisplayOrder = Box.DisplayOrder;
+                    Result.ImageName = Box.ImageName;
                 }
             }
             return Result;

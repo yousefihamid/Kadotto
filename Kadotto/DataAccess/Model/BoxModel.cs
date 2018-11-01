@@ -9,5 +9,6 @@
         public string Description { get; set; }
         public int? DisplayOrder { get; set; }
         public bool Deleted { get; set; }
+        public string ImageName { get; set; }
     }
 }
