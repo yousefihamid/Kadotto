@@ -21,8 +21,8 @@ namespace Kadotto
         public override void OnActionExecuting(ActionExecutingContext filterContext)
         {
             bool Result = new UserService().HasAccess(filterContext.ActionDescriptor.ControllerDescriptor.ControllerName);
-            if (Result == false)
-                filterContext.HttpContext.Response.Redirect("/Home/NoAccess", true);
+            //if (Result == false)
+            //    filterContext.HttpContext.Response.Redirect("/Home/NoAccess", true);
             base.OnActionExecuting(filterContext);
         }
 

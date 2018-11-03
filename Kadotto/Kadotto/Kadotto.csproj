@@ -336,17 +336,16 @@
     <Content Include="Scripts\Core\bootstrap-dropdownhover.min.js" />
     <Content Include="Scripts\Core\jssor.slider.min.js" />
     <Content Include="Scripts\General\jquery-1.11.3.min.js" />
-    <Content Include="Scripts\Kadotto\Base\main.js" />
     <Content Include="Scripts\Core\modernizr-2.8.3-respond-1.4.2.min.js" />
     <Content Include="Scripts\Core\owl.carousel.min.js" />
-    <Content Include="Scripts\Core\Ajax.Models.Service.js" />
-    <Content Include="Scripts\Core\Ajax.Service.js" />
+    <Content Include="assets\js\Kaadoto\Core\Ajax.Models.Service.js" />
+    <Content Include="assets\js\Kaadoto\Core\Ajax.Service.js" />
     <Content Include="Scripts\Core\parallax.min.js" />
     <Content Include="Scripts\Core\scrollReveal.min.js" />
     <Content Include="Scripts\Core\swiper.js" />
     <Content Include="Scripts\Core\swiper.min.js" />
-    <Content Include="Scripts\Core\Tools.js" />
-    <Content Include="Scripts\Core\utility.js" />
+    <Content Include="assets\js\Kaadoto\Core\Tools.js" />
+    <Content Include="assets\js\Kaadoto\Core\utility.js" />
     <Content Include="Scripts\General\bootstrap.js" />
     <Content Include="Scripts\General\bootstrap.min.js" />
     <Content Include="Bundle.config" />
@@ -388,7 +387,7 @@
     <Content Include="assets\js\plugins\revolution\php\youtube\class-youtube.php" />
     <None Include="Scripts\General\jquery-3.3.1.intellisense.js" />
     <Content Include="Scripts\General\jquery-3.3.1.js" />
-    <Content Include="Scripts\General\jquery-3.3.1.min.js" />
+    <Content Include="assets\js\plugins\jquery-3.3.1.min.js" />
     <Content Include="Scripts\General\jquery-3.3.1.slim.js" />
     <Content Include="Scripts\General\jquery-3.3.1.slim.min.js" />
     <Content Include="Scripts\General\jquery-ui.js" />
@@ -406,24 +405,24 @@
     <Content Include="Scripts\General\typeahead.js" />
     <Content Include="Scripts\General\uploader.js" />
     <Content Include="Scripts\General\validator.div.js" />
-    <Content Include="Scripts\General\validator.js" />
-    <Content Include="Scripts\General\validator.min.js" />
-    <Content Include="Scripts\Kadotto\Account\Register.js" />
-    <Content Include="Scripts\Kadotto\Account\VerifyCode.js" />
-    <Content Include="Scripts\Kadotto\Account\SendCode.js" />
-    <Content Include="Scripts\Kadotto\Account\Login.js" />
-    <Content Include="Scripts\Kadotto\Base\Kaadoto.js" />
-    <Content Include="Scripts\Kadotto\Box\BoxList.js" />
-    <Content Include="Scripts\Kadotto\Box\BoxDetails.js" />
-    <Content Include="Scripts\Kadotto\Customer\CustomerDetails.js" />
-    <Content Include="Scripts\Kadotto\Customer\CustomerList.js" />
-    <Content Include="Scripts\Kadotto\Home\Index.js" />
-    <Content Include="Scripts\Kadotto\Partition\PartitionDetails.js" />
-    <Content Include="Scripts\Kadotto\Partition\PartitionList.js" />
-    <Content Include="Scripts\Kadotto\ProductCategory\ProductCategoryDetails.js" />
-    <Content Include="Scripts\Kadotto\ProductCategory\ProductCategoryList.js" />
-    <Content Include="Scripts\Kadotto\Product\ProductDetails.js" />
-    <Content Include="Scripts\Kadotto\Product\ProductList.js" />
+    <Content Include="assets\js\Kaadoto\Core\validator.js" />
+    <Content Include="assets\js\Kaadoto\Core\validator.min.js" />
+    <Content Include="assets\js\Kaadoto\Account\Register.js" />
+    <Content Include="assets\js\Kaadoto\Account\VerifyCode.js" />
+    <Content Include="assets\js\Kaadoto\Account\SendCode.js" />
+    <Content Include="assets\js\Kaadoto\Account\Login.js" />
+    <Content Include="assets\js\Kaadoto\Base\Kaadoto.js" />
+    <Content Include="assets\js\Kaadoto\Box\BoxList.js" />
+    <Content Include="assets\js\Kaadoto\Box\BoxDetails.js" />
+    <Content Include="assets\js\Kaadoto\Customer\CustomerDetails.js" />
+    <Content Include="assets\js\Kaadoto\Customer\CustomerList.js" />
+    <Content Include="assets\js\Kaadoto\Home\Index.js" />
+    <Content Include="assets\js\Kaadoto\Partition\PartitionDetails.js" />
+    <Content Include="assets\js\Kaadoto\Partition\PartitionList.js" />
+    <Content Include="assets\js\Kaadoto\ProductCategory\ProductCategoryDetails.js" />
+    <Content Include="assets\js\Kaadoto\ProductCategory\ProductCategoryList.js" />
+    <Content Include="assets\js\Kaadoto\Product\ProductDetails.js" />
+    <Content Include="assets\js\Kaadoto\Product\ProductList.js" />
     <Content Include="Scripts\Plugins\revolution\jquery.themepunch.revolution.min.js" />
     <Content Include="Scripts\Plugins\revolution\jquery.themepunch.tools.min.js" />
     <Content Include="Scripts\Plugins\revolution\revolution.extension.actions.min.js" />
@@ -521,7 +520,7 @@
     <Content Include="Scripts\Uploader\plupload.full.min.js" />
     <Content Include="Scripts\Uploader\plupload.min.js" />
     <Content Include="Scripts\Uploader\plupload.js" />
-    <Content Include="Scripts\_references.js" />
+    <Content Include="assets\js\_references.js" />
     <Content Include="Web.config">
       <SubType>Designer</SubType>
     </Content>
@@ -573,6 +572,7 @@
   </ItemGroup>
   <ItemGroup>
     <Folder Include="App_Data\" />
+    <Folder Include="Scripts\Kadotto\" />
     <Folder Include="TempUpload\" />
     <Folder Include="UploadedFiles\Box\" />
     <Folder Include="Views\Upload\" />

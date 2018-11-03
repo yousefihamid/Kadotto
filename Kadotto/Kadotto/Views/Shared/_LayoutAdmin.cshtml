@@ -1,6 +1,4 @@
-﻿
-
-@{
+﻿@{
     Layout = "~/Views/Shared/_Layout.cshtml";
 }
 
@@ -8,38 +6,85 @@
 
 @section HeaderSection
 {
+    <!-- Header Start -->
+<header class="ws-header-static">
 
+    <!-- Navbar -->
+    <nav class="navbar ws-navbar navbar-default">
+        <div class="container">
+            <div class="navbar-header">
+                <button type="button" class="navbar-toggle collapsed" data-toggle="collapse" data-target="#bs-example-navbar-collapse-1" aria-expanded="false">
+                    <span class="sr-only">Toggle navigation</span>
+                    <span class="icon-bar"></span>
+                    <span class="icon-bar"></span>
+                    <span class="icon-bar"></span>
+                </button>
+            </div>
+            <!-- Logo -->
+            <div class="ws-logo ws-center">
+                <a href="index.html">
+                    <img src="~/assets/img/logo-black.png" alt="Alternative Text" class="img-responsive">
+                </a>
+            </div>
+
+            <div class="collapse navbar-collapse" id="bs-example-navbar-collapse-1">
+                <ul class="nav navbar-nav navbar-left">
+                    <li class="dropdown">
+                        <a href="#x" class="dropdown-toggle" data-toggle="dropdown" data-hover="dropdown" data-animations="fadeIn">Home <span class="caret"></span></a>
+                        <ul class="dropdown-menu">
+                            <li><a href="index.html">Parallax Image</a></li>
+                            <li><a href="slider-fullwidth.html">Slider FullWidth</a></li>
+                            <li><a href="slider-fullscreen.html">Slider FullScreen</a></li>
+                            <li><a href="3d-parallax.html">3D Parallax Hero</a></li>
+                        </ul>
+                    </li>
+                    <li><a href="about.html">About</a></li>
+                    <li class="dropdown">
+                        <a href="#x" class="dropdown-toggle" data-toggle="dropdown" data-hover="dropdown" data-animations="fadeIn">Shop <span class="caret"></span></a>
+                        <ul class="dropdown-menu">
+                            <li><a href="shop.html">Default Shop Page</a></li>
+                            <li><a href="single-product.html">Single Product</a></li>
+                            <li><a href="shopping-cart.html">Shopping Cart</a></li>
+                            <li><a href="my-account.html">My Account / Register</a></li>
+                            <li><a href="checkout.html">Checkout</a></li>
+                        </ul>
+                    </li>
+                </ul>
+                <ul class="nav navbar-nav navbar-right">
+                    <li class="dropdown">
+                        <a href="#x" class="dropdown-toggle" data-toggle="dropdown" data-hover="dropdown" data-animations="fadeIn">Pages <span class="caret"></span></a>
+                        <ul class="dropdown-menu">
+                            <li><a href="index.html">Header Style 1</a></li>
+                            <li><a href="second-header.html">Header Style 2</a></li>
+                            <li><a href="third-header.html">Header Style 3</a></li>
+                            <li><a href="faq.html#shipping">Shipping &amp; Return</a></li>
+                            <li><a href="faq.html#privacy">Privacy Policy</a></li>
+                            <li><a href="faq.html">F.A.Q</a></li>
+                        </ul>
+                    </li>
+                    <li><a href="journal.html">Journal</a></li>
+                    <li><a href="contact.html">Contact</a></li>
+                </ul>
+            </div>
+        </div>
+    </nav>
+</header>
+<!-- End Header -->
 }
 
-<div class="contactus_main">
-
-    <div class="section pages_banner">
-        <div class="banner_wrapper">
+<div class="container">
+    <div class="row">
+        <div class="col-sm-6">
+            <span class="page_title_text">@ViewBag.Title</span>
         </div>
     </div>
-    <div class="container">
-        <div class="row">
-            <div class="col-sm-6">
-                <div class="page_title_box">
-                    <div class="pages_title_header">
-                        <span class="page_title_text">@ViewBag.Title</span>
-                    </div>
-                </div>
-            </div>
-        </div>
-        <br />
-        <div class="row">
-            <div class="col-sm-12">
-              @RenderBody()
-            </div>
-        </div>
-        <br />
-        <div>
+    <br />
+    <div class="row">
+        <div class="col-sm-12">
+            @RenderBody()
         </div>
     </div>
 </div>
-
-
 
 @section FooterSection
 {

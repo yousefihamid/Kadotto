@@ -8,12 +8,132 @@
 
 @section HeaderSection
 {
+        <!-- Header Start -->
+<header class="ws-header ws-header-transparent">
 
+    <!-- Navbar -->
+    <nav class="navbar ws-navbar navbar-default">
+        <div class="container">
+            <div class="navbar-header">
+                <button type="button" class="navbar-toggle collapsed" data-toggle="collapse" data-target="#bs-example-navbar-collapse-1" aria-expanded="false">
+                    <span class="sr-only">Toggle navigation</span>
+                    <span class="icon-bar"></span>
+                    <span class="icon-bar"></span>
+                    <span class="icon-bar"></span>
+                </button>
+            </div>
+            <!-- Logo -->
+            <div class="ws-logo ws-center">
+                <a href="index.html">
+                    <img src="~/assets/img/logo-white.png" alt="Alternative Text" class="img-responsive">
+                </a>
+            </div>
+
+            <div class="collapse navbar-collapse" id="bs-example-navbar-collapse-1">
+                <ul class="nav navbar-nav navbar-left">
+                    <li class="dropdown">
+                        <a href="#x" class="dropdown-toggle" data-toggle="dropdown" data-hover="dropdown" data-animations="fadeIn">Home <span class="caret"></span></a>
+                        <ul class="dropdown-menu">
+                            <li><a href="index.html">Parallax Image</a></li>
+                            <li><a href="slider-fullwidth.html">Slider FullWidth</a></li>
+                            <li><a href="slider-fullscreen.html">Slider FullScreen</a></li>
+                            <li><a href="3d-parallax.html">3D Parallax Hero</a></li>
+                        </ul>
+                    </li>
+                    <li><a href="about.html">About</a></li>
+                    <li class="dropdown">
+                        <a href="#x" class="dropdown-toggle" data-toggle="dropdown" data-hover="dropdown" data-animations="fadeIn">Shop <span class="caret"></span></a>
+                        <ul class="dropdown-menu">
+                            <li><a href="shop.html">Default Shop Page</a></li>
+                            <li><a href="single-product.html">Single Product</a></li>
+                            <li><a href="shopping-cart.html">Shopping Cart</a></li>
+                            <li><a href="my-account.html">My Account / Register</a></li>
+                            <li><a href="checkout.html">Checkout</a></li>
+                        </ul>
+                    </li>
+                </ul>
+                <ul class="nav navbar-nav navbar-right">
+                    <li class="dropdown">
+                        <a href="#x" class="dropdown-toggle" data-toggle="dropdown" data-hover="dropdown" data-animations="fadeIn">Pages <span class="caret"></span></a>
+                        <ul class="dropdown-menu">
+                            <li><a href="index.html">Header Style 1</a></li>
+                            <li><a href="second-header.html">Header Style 2</a></li>
+                            <li><a href="third-header.html">Header Style 3</a></li>
+                            <li><a href="faq.html#shipping">Shipping &amp; Return</a></li>
+                            <li><a href="faq.html#privacy">Privacy Policy</a></li>
+                            <li><a href="faq.html">F.A.Q</a></li>
+                        </ul>
+                    </li>
+                    <li><a href="journal.html">Journal</a></li>
+                    <li><a href="contact.html">Contact</a></li>
+                </ul>
+            </div>
+        </div>
+    </nav>
+</header>
+<!-- End Header -->
 }
 
 @RenderBody()
 
 @section FooterSection
 {
-
+        <!-- Instagram Content -->
+<section id="ws-instagram-section">
+    <div class="container">
+        <div class="row vertical-align">
+            <!-- Instagram Information -->
+            <div class="col-sm-3">
+                <div class="ws-instagram-header">
+                    <h3>Instagram</h3>
+                    <br>
+                    <a href="https://www.instagram.com/" target="_blank" class="ws-instagram-link"> @@artday</a>
+                    <p>Lorem ipsum dolor sit amet, consectetuer adipiscing elit, sed diam nonummy.</p>
+                </div>
+            </div>
+            <!-- Instagram Item -->
+            <div class="col-sm-3 ws-instagram-item" data-sr='wait 0.1s, ease-in 20px'>
+                <a href="https://www.instagram.com/" target="_blank">
+                    <img src="~/assets/img/journal/1.jpg" alt="Alternative Text" class="img-responsive">
+                </a>
+            </div>
+            <!-- Instagram Item -->
+            <div class="col-sm-3 ws-instagram-item" data-sr='wait 0.3s, ease-in 20px'>
+                <a href="https://www.instagram.com/" target="_blank">
+                    <img src="~/assets/img/journal/4.jpg" alt="Alternative Text" class="img-responsive">
+                </a>
+            </div>
+            <!-- Instagram Item -->
+            <div class="col-sm-3 ws-instagram-item" data-sr='wait 0.5s, ease-in 20px'>
+                <a href="https://www.instagram.com/" target="_blank">
+                    <img src="~/assets/img/journal/8.jpg" alt="Alternative Text" class="img-responsive">
+                </a>
+            </div>
+        </div>
+    </div>
+</section>
+<!-- End Instagram Content -->
+<!-- Subscribe Section -->
+<section class="ws-subscribe-section">
+    <div class="container">
+        <div class="row">
+            <!-- Subscribe Content -->
+            <div class="ws-subscribe-content text-center clearfix">
+                <div class="col-sm-8 col-sm-offset-2">
+                    <h3>Sign up for the newsletter</h3>
+                    <div class="ws-separator"></div>
+                    <!-- Form -->
+                    <form class="form-inline">
+                        <div class="form-group">
+                            <input type="email" class="form-control" placeholder="Enter your email">
+                        </div>
+                        <!-- Button -->
+                        <a class="btn ws-btn-subscribe">Subscribe</a>
+                    </form>
+                </div>
+            </div>
+        </div>
+    </div>
+</section>
+<!-- End Subscribe Section -->
 }

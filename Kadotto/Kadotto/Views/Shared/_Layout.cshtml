@@ -22,68 +22,6 @@
     <link href='https://fonts.googleapis.com/css?family=Merriweather:400,300,700,900' rel='stylesheet' type='text/css'>
     <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/font-awesome/4.4.0/css/font-awesome.min.css">
 
-    @*<link href="~/Content/Styles/bootstrap.min.css" rel="stylesheet" />
-    <link href='https://fonts.googleapis.com/css?family=Lato:400,100,300,700,900' rel='stylesheet' type='text/css'>
-    <link href='https://fonts.googleapis.com/css?family=Merriweather:400,300,700,900' rel='stylesheet' type='text/css'>
-    <link href="~/Content/Styles/animate.min.css" rel="stylesheet" />
-    <link href="~/Content/Styles/owl.carousel.min.css" rel="stylesheet" />
-    <link href="~/Content/Styles/owl.theme.default.min.css" rel="stylesheet" />
-    <link href="~/Content/Styles/twitter-typeahead.css" rel="stylesheet" />
-    <link href="~/Content/Styles/main.css" rel="stylesheet" />
-    <link href="~/Content/Styles/settings.css" rel="stylesheet" />
-    <link href="~/Content/Styles/layers.css" rel="stylesheet" />
-    <link href="~/Content/Styles/navigation.css" rel="stylesheet" />
-    *@
-
-
-    @*<script src="~/Scripts/General/jquery-3.3.1.min.js"></script>
-    <script src="~/Scripts/General/jquery.cookie.min.js"></script>
-    <script src="~/Scripts/General/bootstrap.min.js"></script>
-    <script src="~/Scripts/General/jquery.validate.min.js"></script>
-    <script src="~/Scripts/General/validator.min.js"></script>
-    <script src="~/Scripts/General/typeahead.bundle.js"></script>
-    <script src="~/Scripts/Core/swiper.min.js"></script>
-    <script src="~/Scripts/Core/Ajax.Service.js"></script>
-    <script src="~/Scripts/Core/Ajax.Models.Service.js"></script>
-    <script src="~/Scripts/Core/utility.js"></script>
-    <script src="~/Scripts/Core/Tools.js"></script>
-    <script src="~/Scripts/Kadotto/Base/Kaadoto.js"></script>
-    <script src="~/Scripts/Plugins/revolution/jquery.themepunch.tools.min.js"></script>
-    <script src="~/Scripts/Plugins/revolution/jquery.themepunch.revolution.min.js"></script>
-
-    <script src="~/Scripts/Plugins/revolution/revolution.extension.video.min.js"></script>
-    <script src="~/Scripts/Plugins/revolution/revolution.extension.actions.min.js"></script>
-    <script src="~/Scripts/Plugins/revolution/revolution.extension.carousel.min.js"></script>
-    <script src="~/Scripts/Plugins/revolution/revolution.extension.kenburn.min.js"></script>
-    <script src="~/Scripts/Plugins/revolution/revolution.extension.layeranimation.min.js"></script>
-    <script src="~/Scripts/Plugins/revolution/revolution.extension.migration.min.js"></script>
-    <script src="~/Scripts/Plugins/revolution/revolution.extension.navigation.min.js"></script>
-    <script src="~/Scripts/Plugins/revolution/revolution.extension.parallax.min.js"></script>
-    <script src="~/Scripts/Plugins/revolution/revolution.extension.slideanims.min.js"></script>
-
-    <script src="~/Scripts/Core/modernizr-2.8.3-respond-1.4.2.min.js"></script>
-    <script src="~/Scripts/Core/parallax.min.js"></script>
-    <script src="~/Scripts/Core/scrollReveal.min.js"></script>
-    <script src="~/Scripts/Core/bootstrap-dropdownhover.min.js"></script>
-    <script src="~/Scripts/Core/main.js"></script>*
-    @*<script>
-        $(document).ready(function () {
-
-            $('.menu_button_container ').on("click", function () {
-                $('.hamburger').toggleClass("is-active");
-            });
-            if ($(window).width() >= 768) {
-                $('ul.nav li.dropdown').hover(function () {
-                    $(this).addClass('open').find('.dropdown-menu').stop(true, true).delay(200).fadeIn(300);
-
-                }, function () {
-                    $(this).removeClass('open').find('.dropdown-menu').stop(true, true).delay(200).fadeOut(300);
-                });
-            }
-        });
-    </script>*@
-    @*<script src="~/Scripts/Core/owl.carousel.min.js"></script>*@
-    @RenderSection("HeaderSection", false)
 </head>
 <body>
     <!--[if lt IE 8]>
@@ -129,7 +67,7 @@
                                     <div class="media-left">
                                         <!-- Image -->
                                         <a href="#">
-                                            <img src="Content/Images/works/abstract/5.jpg" class="media-object" alt="Alternative Text">
+                                            <img src="~/assets/img/works/abstract/5.jpg" class="media-object" alt="Alternative Text">
                                         </a>
                                     </div>
 
@@ -147,7 +85,7 @@
                                     <div class="media-left">
                                         <!-- Image -->
                                         <a href="#">
-                                            <img src="Content/Images/works/illustrated/4.jpg" class="media-object" alt="Alternative Text">
+                                            <img src="~/assets/img/works/illustrated/4.jpg" class="media-object" alt="Alternative Text">
                                         </a>
                                     </div>
 
@@ -182,72 +120,9 @@
         </div>
     </div>
     <!-- Top Bar End -->
-    <!-- Header Start -->
-    <header class="ws-header ws-header-transparent">
+    @RenderSection("HeaderSection", false)
 
-        <!-- Navbar -->
-        <nav class="navbar ws-navbar navbar-default">
-            <div class="container">
-                <div class="navbar-header">
-                    <button type="button" class="navbar-toggle collapsed" data-toggle="collapse" data-target="#bs-example-navbar-collapse-1" aria-expanded="false">
-                        <span class="sr-only">Toggle navigation</span>
-                        <span class="icon-bar"></span>
-                        <span class="icon-bar"></span>
-                        <span class="icon-bar"></span>
-                    </button>
-                </div>
-                <!-- Logo -->
-                <div class="ws-logo ws-center">
-                    <a href="index.html">
-                        <img src="Content/Images/logo-white.png" alt="Alternative Text" class="img-responsive">
-                    </a>
-                </div>
-
-                <div class="collapse navbar-collapse" id="bs-example-navbar-collapse-1">
-                    <ul class="nav navbar-nav navbar-left">
-                        <li class="dropdown">
-                            <a href="#x" class="dropdown-toggle" data-toggle="dropdown" data-hover="dropdown" data-animations="fadeIn">Home <span class="caret"></span></a>
-                            <ul class="dropdown-menu">
-                                <li><a href="index.html">Parallax Image</a></li>
-                                <li><a href="slider-fullwidth.html">Slider FullWidth</a></li>
-                                <li><a href="slider-fullscreen.html">Slider FullScreen</a></li>
-                                <li><a href="3d-parallax.html">3D Parallax Hero</a></li>
-                            </ul>
-                        </li>
-                        <li><a href="about.html">About</a></li>
-                        <li class="dropdown">
-                            <a href="#x" class="dropdown-toggle" data-toggle="dropdown" data-hover="dropdown" data-animations="fadeIn">Shop <span class="caret"></span></a>
-                            <ul class="dropdown-menu">
-                                <li><a href="shop.html">Default Shop Page</a></li>
-                                <li><a href="single-product.html">Single Product</a></li>
-                                <li><a href="shopping-cart.html">Shopping Cart</a></li>
-                                <li><a href="my-account.html">My Account / Register</a></li>
-                                <li><a href="checkout.html">Checkout</a></li>
-                            </ul>
-                        </li>
-                    </ul>
-                    <ul class="nav navbar-nav navbar-right">
-                        <li class="dropdown">
-                            <a href="#x" class="dropdown-toggle" data-toggle="dropdown" data-hover="dropdown" data-animations="fadeIn">Pages <span class="caret"></span></a>
-                            <ul class="dropdown-menu">
-                                <li><a href="index.html">Header Style 1</a></li>
-                                <li><a href="second-header.html">Header Style 2</a></li>
-                                <li><a href="third-header.html">Header Style 3</a></li>
-                                <li><a href="faq.html#shipping">Shipping &amp; Return</a></li>
-                                <li><a href="faq.html#privacy">Privacy Policy</a></li>
-                                <li><a href="faq.html">F.A.Q</a></li>
-                            </ul>
-                        </li>
-                        <li><a href="journal.html">Journal</a></li>
-                        <li><a href="contact.html">Contact</a></li>
-                    </ul>
-                </div>
-            </div>
-        </nav>
-    </header>
-    <!-- End Header -->
     @RenderBody()
-    @RenderSection("FooterSection")
     <!-- Kaadoto -->
     <div id="myModal" class="modal fade custom_modal" role="dialog">
         <div class="modal-dialog">
@@ -295,65 +170,7 @@
 
     </div>
     <!-- Kaadoto -->
-
-    <!-- Instagram Content -->
-    <section id="ws-instagram-section">
-        <div class="container">
-            <div class="row vertical-align">
-                <!-- Instagram Information -->
-                <div class="col-sm-3">
-                    <div class="ws-instagram-header">
-                        <h3>Instagram</h3>
-                        <br>
-                        <a href="https://www.instagram.com/" target="_blank" class="ws-instagram-link"> @@artday</a>
-                        <p>Lorem ipsum dolor sit amet, consectetuer adipiscing elit, sed diam nonummy.</p>
-                    </div>
-                </div>
-                <!-- Instagram Item -->
-                <div class="col-sm-3 ws-instagram-item" data-sr='wait 0.1s, ease-in 20px'>
-                    <a href="https://www.instagram.com/" target="_blank">
-                        <img src="Content/Images/journal/1.jpg" alt="Alternative Text" class="img-responsive">
-                    </a>
-                </div>
-                <!-- Instagram Item -->
-                <div class="col-sm-3 ws-instagram-item" data-sr='wait 0.3s, ease-in 20px'>
-                    <a href="https://www.instagram.com/" target="_blank">
-                        <img src="Content/Images/journal/4.jpg" alt="Alternative Text" class="img-responsive">
-                    </a>
-                </div>
-                <!-- Instagram Item -->
-                <div class="col-sm-3 ws-instagram-item" data-sr='wait 0.5s, ease-in 20px'>
-                    <a href="https://www.instagram.com/" target="_blank">
-                        <img src="Content/Images/journal/8.jpg" alt="Alternative Text" class="img-responsive">
-                    </a>
-                </div>
-            </div>
-        </div>
-    </section>
-    <!-- End Instagram Content -->
-    <!-- Subscribe Section -->
-    <section class="ws-subscribe-section">
-        <div class="container">
-            <div class="row">
-                <!-- Subscribe Content -->
-                <div class="ws-subscribe-content text-center clearfix">
-                    <div class="col-sm-8 col-sm-offset-2">
-                        <h3>Sign up for the newsletter</h3>
-                        <div class="ws-separator"></div>
-                        <!-- Form -->
-                        <form class="form-inline">
-                            <div class="form-group">
-                                <input type="email" class="form-control" placeholder="Enter your email">
-                            </div>
-                            <!-- Button -->
-                            <a class="btn ws-btn-subscribe">Subscribe</a>
-                        </form>
-                    </div>
-                </div>
-            </div>
-        </div>
-    </section>
-    <!-- End Subscribe Section -->
+    @RenderSection("FooterSection")
     <!-- Footer Start -->
     <footer class="ws-footer">
         <div class="container">
