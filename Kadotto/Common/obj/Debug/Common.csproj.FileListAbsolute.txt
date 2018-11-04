@@ -8,3 +8,8 @@ D:\Mysource\Projects\Kadoto\Kadotto\Common\bin\Debug\Common.pdb
 D:\Mysource\Projects\Kadoto\Kadotto\Common\obj\Debug\Common.csprojResolveAssemblyReference.cache
 D:\Mysource\Projects\Kadoto\Kadotto\Common\obj\Debug\Common.dll
 D:\Mysource\Projects\Kadoto\Kadotto\Common\obj\Debug\Common.pdb
+C:\Users\a.tizfahm\Source\Repos\yousefihamid\Kadotto\Kadotto\Common\bin\Debug\Common.dll
+C:\Users\a.tizfahm\Source\Repos\yousefihamid\Kadotto\Kadotto\Common\bin\Debug\Common.pdb
+C:\Users\a.tizfahm\Source\Repos\yousefihamid\Kadotto\Kadotto\Common\obj\Debug\Common.csprojResolveAssemblyReference.cache
+C:\Users\a.tizfahm\Source\Repos\yousefihamid\Kadotto\Kadotto\Common\obj\Debug\Common.dll
+C:\Users\a.tizfahm\Source\Repos\yousefihamid\Kadotto\Kadotto\Common\obj\Debug\Common.pdb
