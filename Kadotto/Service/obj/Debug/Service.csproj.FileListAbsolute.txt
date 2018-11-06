@@ -26,3 +26,17 @@ D:\Mysource\Projects\Kadoto\Kadotto\Service\bin\Debug\EntityFramework.SqlServer.
 D:\Mysource\Projects\Kadoto\Kadotto\Service\obj\Debug\Service.csprojResolveAssemblyReference.cache
 D:\Mysource\Projects\Kadoto\Kadotto\Service\obj\Debug\Service.dll
 D:\Mysource\Projects\Kadoto\Kadotto\Service\obj\Debug\Service.pdb
+C:\Users\a.tizfahm\Source\Repos\yousefihamid\Kadotto\Kadotto\Service\bin\Debug\Service.dll.config
+C:\Users\a.tizfahm\Source\Repos\yousefihamid\Kadotto\Kadotto\Service\bin\Debug\Service.dll
+C:\Users\a.tizfahm\Source\Repos\yousefihamid\Kadotto\Kadotto\Service\bin\Debug\Service.pdb
+C:\Users\a.tizfahm\Source\Repos\yousefihamid\Kadotto\Kadotto\Service\bin\Debug\Common.dll
+C:\Users\a.tizfahm\Source\Repos\yousefihamid\Kadotto\Kadotto\Service\bin\Debug\DataAccess.dll
+C:\Users\a.tizfahm\Source\Repos\yousefihamid\Kadotto\Kadotto\Service\bin\Debug\EntityFramework.dll
+C:\Users\a.tizfahm\Source\Repos\yousefihamid\Kadotto\Kadotto\Service\bin\Debug\EntityFramework.SqlServer.dll
+C:\Users\a.tizfahm\Source\Repos\yousefihamid\Kadotto\Kadotto\Service\bin\Debug\Common.pdb
+C:\Users\a.tizfahm\Source\Repos\yousefihamid\Kadotto\Kadotto\Service\bin\Debug\DataAccess.pdb
+C:\Users\a.tizfahm\Source\Repos\yousefihamid\Kadotto\Kadotto\Service\bin\Debug\EntityFramework.xml
+C:\Users\a.tizfahm\Source\Repos\yousefihamid\Kadotto\Kadotto\Service\bin\Debug\EntityFramework.SqlServer.xml
+C:\Users\a.tizfahm\Source\Repos\yousefihamid\Kadotto\Kadotto\Service\obj\Debug\Service.csprojResolveAssemblyReference.cache
+C:\Users\a.tizfahm\Source\Repos\yousefihamid\Kadotto\Kadotto\Service\obj\Debug\Service.dll
+C:\Users\a.tizfahm\Source\Repos\yousefihamid\Kadotto\Kadotto\Service\obj\Debug\Service.pdb
