@@ -575,6 +575,7 @@
     <Folder Include="Scripts\Kadotto\" />
     <Folder Include="TempUpload\" />
     <Folder Include="UploadedFiles\Box\" />
+    <Folder Include="UploadedFiles\Client\" />
     <Folder Include="Views\Upload\" />
   </ItemGroup>
   <ItemGroup>

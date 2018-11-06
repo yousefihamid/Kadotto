@@ -53,9 +53,11 @@
     <Compile Include="Mapping\CustomerMap.cs" />
     <Compile Include="Mapping\ProductCategoryMap.cs" />
     <Compile Include="Mapping\ProductAllowedPartitionMap.cs" />
+    <Compile Include="Mapping\ClientMap.cs" />
     <Compile Include="Mapping\ProductMap.cs" />
     <Compile Include="Mapping\PartitionMap.cs" />
     <Compile Include="Mapping\BoxMap.cs" />
+    <Compile Include="Model\ClientModel.cs" />
     <Compile Include="Model\ProductCategoryModel.cs" />
     <Compile Include="Model\ProductAllowedPartitionModel.cs" />
     <Compile Include="Model\ProductModel.cs" />

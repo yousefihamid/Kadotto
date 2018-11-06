@@ -18,6 +18,7 @@ namespace DataAccess.Context
         public DbSet<ProductAllowedPartitionModel> ProductAllowedPartitions { get; set; }
         public DbSet<ProductCategoryModel> ProductCategories { get; set; }
         public DbSet<CustomerModel> Customers { get; set; }
+        public DbSet<ClientModel> Clients { get; set; }
 
         protected override void OnModelCreating(DbModelBuilder modelBuilder)
         {
@@ -28,6 +29,7 @@ namespace DataAccess.Context
             modelBuilder.Configurations.Add(new ProductAllowedPartitionMap());
             modelBuilder.Configurations.Add(new ProductCategoryMap());
             modelBuilder.Configurations.Add(new CustomerMap());
+            modelBuilder.Configurations.Add(new ClientMap());
         }
     }
 }

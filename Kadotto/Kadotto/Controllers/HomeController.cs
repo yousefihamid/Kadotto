@@ -1,9 +1,4 @@
-﻿using Common.Core;
-using Service.Core;
-using System;
-using System.Collections.Generic;
-using System.Linq;
-using System.Web;
+﻿using Service.Core;
 using System.Web.Mvc;
 
 namespace Kadotto.Controllers
@@ -13,7 +8,7 @@ namespace Kadotto.Controllers
         public ActionResult Index()
         {
             ViewBag.InterestedBoxes = new BoxService().GetAll();
-            ViewBag.SuggestedBoxes = new List<BoxDTO>();
+            ViewBag.Clients = new ClientService().GetAll();
             return View();
         }
 

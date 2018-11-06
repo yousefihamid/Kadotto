@@ -43,6 +43,7 @@
   <ItemGroup>
     <Compile Include="Authentication\UserDTO.cs" />
     <Compile Include="Core\BoxDTO.cs" />
+    <Compile Include="Core\ClientDTO.cs" />
     <Compile Include="Core\ProductCategoryDTO.cs" />
     <Compile Include="Core\PartitionDTO.cs" />
     <Compile Include="Core\ProductDTO.cs" />

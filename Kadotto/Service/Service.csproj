@@ -51,6 +51,7 @@
   </ItemGroup>
   <ItemGroup>
     <Compile Include="Core\PartitionService.cs" />
+    <Compile Include="Core\ClientService.cs" />
     <Compile Include="Core\ProductService.cs" />
     <Compile Include="Core\ProductCategoryService.cs" />
     <Compile Include="Core\BoxService.cs" />
