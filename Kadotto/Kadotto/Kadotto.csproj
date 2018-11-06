@@ -204,6 +204,9 @@
     <Content Include="assets\img\backgrounds\journal-bg.jpg" />
     <Content Include="assets\img\backgrounds\journal-header-bg.jpg" />
     <Content Include="assets\img\backgrounds\second-frame.png" />
+    <Content Include="assets\img\backgrounds\Select-a-Box.png" />
+    <Content Include="assets\img\backgrounds\Select-Your-Gifts.png" />
+    <Content Include="assets\img\backgrounds\Ship.png" />
     <Content Include="assets\img\backgrounds\shop-header-bg.jpg" />
     <Content Include="assets\img\backgrounds\third-frame.png" />
     <Content Include="assets\img\contact\amsterdam.jpg" />
