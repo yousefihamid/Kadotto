@@ -1,0 +1,129 @@
+﻿@using Common.Core;
+@{
+    ViewBag.Title = "Index";
+    Layout = "~/Views/Shared/_LayoutShop.cshtml";
+}
+<script src="~/assets/js/Kaadoto/Shop/Shop.js"></script>
+    <!-- Page Content -->
+<div class="container ws-page-container">
+    <div class="row">
+        <div class="ws-shop-page">
+            <!-- Categories Content -->
+            <div class="tab-content">
+                <div class="panel-group">
+                    <div class="panel panel-default">
+                        <div class="panel-heading">
+                            <h4 class="panel-title">
+                                <a id="Box-toggle" data-toggle="collapse" href="#Boxes">
+                                    <span class="">Boxes</span>
+                                    <span class="glyphicon glyphicon-glass"></span>
+                                </a>
+                            </h4>
+                        </div>
+                        <div id="Boxes" class="panel-collapse collapse in">
+                            <div class="panel-body">
+                                @foreach (BoxDTO item in ViewBag.Boxes)
+                                {
+                                    <div id="@string.Format("Box_{0}",item.ID)" tag="@item.ID" data-placeCount="@item.BoxPlaceCount" class="col-sm-6 col-md-4 ws-works-item">
+                                        <a href="#">
+                                            <div class="ws-item-offer">
+                                                <!-- Image -->
+                                                <figure>
+                                                    <img src="@Url.Content(string.Format("~/UploadedFiles/Box/{0}", item.ImageName))" alt="Alternative Text" class="img-responsive">
+                                                    <span class="glyphicon glyphicon-plus-sign" onclick="$.Kaadoto.Shop.AddBox(this)"></span>
+                                                </figure>
+                                            </div>
+                                            <div class="ws-works-caption text-center">
+                                                <!-- Item Category -->
+                                                <div class="ws-item-category">@item.BoxSize</div>
+                                                <!-- Title -->
+                                                <h3 class="ws-item-title">@item.Name</h3>
+                                                <div class="ws-item-separator"></div>
+                                                <!-- Price -->
+                                                <div class="ws-item-price">@item.BoxPlaceCount</div>
+                                            </div>
+                                        </a>
+                                    </div>
+                                }
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="panel-group">
+                    <div class="panel panel-default">
+                        <div class="panel-heading">
+                            <h4 class="panel-title">
+                                <a id="Product-toggle" data-toggle="collapse" href="">
+                                    <span class="">Products</span>
+                                    <span class="glyphicon glyphicon-gift"></span>
+                                </a>
+                            </h4>
+                        </div>
+                        <div id="Products" class="panel-collapse collapse">
+                            <div class="panel-body">
+                                @foreach (ProductDTO item in ViewBag.Products)
+                                {
+                                    <div id="@string.Format("Product_{0}",item.ID)" tag="@item.ID" class="col-sm-4 col-md-3 ws-works-item">
+                                        <a href="#">
+                                            <!-- Image -->
+                                            <figure>
+                                                <img src="@Url.Content(string.Format("~/UploadedFiles/Product/{0}", item.ImageName))" alt="Alternative Text" class="img-responsive">
+                                                <span class="glyphicon glyphicon-plus-sign" onclick="$.Kaadoto.Shop.AddProduct(this)"></span>
+                                            </figure>
+                                            <div class="ws-works-caption text-center">
+                                                <!-- Item Category -->
+                                                <div class="ws-item-category">@item.ProductCategoryTitle</div>
+                                                <!-- Title -->
+                                                <h3 class="ws-item-title">@item.Title</h3>
+                                                <div class="ws-item-separator"></div>
+                                                <!-- Price -->
+                                                <div tag="@item.Price" class="ws-item-price">@item.Price</div>
+                                            </div>
+                                        </a>
+                                    </div>
+                                }
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <!-- End Categories Content -->
+            <!-- Load More -->
+            <div class="ws-more-btn-holder col-sm-12 hidden">
+                <a href="#x" class="btn ws-more-btn"> Load More</a>
+            </div>
+        </div>
+    </div>
+</div>
+<div class="policy_alert SalePanel hidden">
+    <div class="alert alert-dismissible fade in">
+        @*<a href="#" class="close PolicyClose" data-dismiss="alert" aria-label="close">×</a>*@
+        <div class="row">
+            <div class="col-sm-1 col-md-1 selected-Price">
+                <span class="Price">0</span>
+                <button class="btn ws-btn-fullwidth btnAddToCard" onclick="$.Kaadoto.Shop.AddToCard()">
+                    Buy
+                </button>
+            </div>
+            <span class="col-sm-1 col-md-1">|</span>
+            <div class="col-sm-1 col-md-1 selected-Boxes" >
+
+            </div>
+            <span class="col-sm-1 col-md-1">|</span>
+            <div class="selected-Products">
+
+            </div>
+        </div>
+    </div>
+</div>
+<div class="hidden">
+    <div class="BoxSelected" >
+        <span class="glyphicon glyphicon-remove-circle" onclick="$.Kaadoto.Shop.DeleteBox(this)"></span>
+    </div>
+    <div class="col-sm-1 col-md-1 ProductSelected">
+        <span class="glyphicon glyphicon-remove-circle" onclick="$.Kaadoto.Shop.DeleteProduct(this)"></span>
+    </div>
+</div>
+<!-- End Page Content -->
+

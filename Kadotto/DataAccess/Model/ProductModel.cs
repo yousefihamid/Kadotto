@@ -18,5 +18,7 @@ namespace DataAccess.Model
         public DateTime UpdateDate { get; set; }
         public int DisplayOrder { get; set; }
         public bool Visible { get; set; }
+        public decimal Price { get; set; }
+        public string ImageName { get; set; }
     }
 }

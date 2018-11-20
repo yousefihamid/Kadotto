@@ -19,6 +19,10 @@ namespace DataAccess.Context
         public DbSet<ProductCategoryModel> ProductCategories { get; set; }
         public DbSet<CustomerModel> Customers { get; set; }
         public DbSet<ClientModel> Clients { get; set; }
+        public DbSet<PackagedBoxModel> PackagedBoxes { get; set; }
+        public DbSet<PackagedBoxDetailModel> PackagedBoxDetails { get; set; }
+        public DbSet<OrderModel> Orders { get; set; }
+        public DbSet<OrderDetailModel> OrderDetails { get; set; }
 
         protected override void OnModelCreating(DbModelBuilder modelBuilder)
         {
@@ -30,6 +34,10 @@ namespace DataAccess.Context
             modelBuilder.Configurations.Add(new ProductCategoryMap());
             modelBuilder.Configurations.Add(new CustomerMap());
             modelBuilder.Configurations.Add(new ClientMap());
+            modelBuilder.Configurations.Add(new PackagedBoxMap());
+            modelBuilder.Configurations.Add(new PackagedBoxDetailMap());
+            modelBuilder.Configurations.Add(new OrderMap());
+            modelBuilder.Configurations.Add(new OrderDetailMap());
         }
     }
 }

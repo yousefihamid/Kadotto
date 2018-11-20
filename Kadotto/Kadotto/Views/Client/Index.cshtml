@@ -1,0 +1,64 @@
+﻿@using Common.Core;
+
+@{
+    ViewBag.Title = "Client";
+    Layout = "~/Views/Shared/_LayoutAdmin.cshtml";
+}
+@section scripts
+{
+<script src="~/assets/js/Kaadoto/Client/ClientList.js"></script>
+}
+
+<p>
+   @Html.ActionLink("Create New", "Details")
+</p>
+<table class="table">
+                    <tr>
+                        <th>
+                            Title
+                        </th>
+                        <th>
+                            Image Name
+                        </th>
+                        <th></th>
+                    </tr>
+
+                    @foreach (ClientDTO item in ViewBag.Clients)
+                    {
+                        <tr>
+                            <td>
+                                @item.Title
+                            </td>
+                            <td>
+                                @item.ImageName
+                            </td>
+                            <td>
+                                <span class="glyphicon glyphicon-edit" onclick="$.Client.Edit(@item.ID)"></span> |
+                                <span class="glyphicon glyphicon-info-sign" onclick="$.Client.View(@item.ID)"></span> |
+                                <span class="glyphicon glyphicon-trash" onclick="$.Client.Delete(@item.ID)"></span>
+                            </td>
+                        </tr>
+                    }
+
+                </table>
+<div class="hidden">
+    <div class="details_fn">
+        <div class="row">
+            <div class="col-md-3">
+                <span>Title</span>
+            </div>
+            <div class="col-md-9">
+                <span class="Title"></span>
+            </div>
+        </div>
+        <div class="row">
+            <div class="col-md-3">
+                <span>Image Name</span>
+            </div>
+            <div class="col-md-9">
+                <span class="ImageName"></span>
+            </div>
+        </div>
+    </div>
+</div>
+

@@ -84,7 +84,7 @@ namespace Service.Core
                         Description = a.Description,
                         DisplayOrder = a.DisplayOrder,
                         Deleted = a.Deleted,
-                        ImageName=a.ImageName
+                        ImageName = a.ImageName
                     }).ToList();
             }
             return Result;

@@ -50,6 +50,10 @@
   </ItemGroup>
   <ItemGroup>
     <Compile Include="Context\BaseContext.cs" />
+    <Compile Include="Mapping\OrderDetailMap.cs" />
+    <Compile Include="Mapping\OrderMap.cs" />
+    <Compile Include="Mapping\PackagedBoxDetailBoxMap.cs" />
+    <Compile Include="Mapping\PackagedBoxMap.cs" />
     <Compile Include="Mapping\CustomerMap.cs" />
     <Compile Include="Mapping\ProductCategoryMap.cs" />
     <Compile Include="Mapping\ProductAllowedPartitionMap.cs" />
@@ -57,6 +61,10 @@
     <Compile Include="Mapping\ProductMap.cs" />
     <Compile Include="Mapping\PartitionMap.cs" />
     <Compile Include="Mapping\BoxMap.cs" />
+    <Compile Include="Model\OrderDetailModel.cs" />
+    <Compile Include="Model\OrderModel.cs" />
+    <Compile Include="Model\PackagedBoxDetailModel.cs" />
+    <Compile Include="Model\PackagedBoxModel.cs" />
     <Compile Include="Model\ClientModel.cs" />
     <Compile Include="Model\ProductCategoryModel.cs" />
     <Compile Include="Model\ProductAllowedPartitionModel.cs" />

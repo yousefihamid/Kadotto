@@ -17,7 +17,6 @@ D:\Mysource\Projects\Kadoto\Kadotto\DataAccess\bin\Debug\EntityFramework.xml
 D:\Mysource\Projects\Kadoto\Kadotto\DataAccess\bin\Debug\EntityFramework.SqlServer.xml
 D:\Mysource\Projects\Kadoto\Kadotto\DataAccess\obj\Debug\DataAccess.dll
 D:\Mysource\Projects\Kadoto\Kadotto\DataAccess\obj\Debug\DataAccess.pdb
-D:\Mysource\Projects\Kadoto\Kadotto\DataAccess\obj\Debug\DataAccess.csprojResolveAssemblyReference.cache
 C:\Users\a.tizfahm\Source\Repos\yousefihamid\Kadotto\Kadotto\DataAccess\bin\Debug\DataAccess.dll.config
 C:\Users\a.tizfahm\Source\Repos\yousefihamid\Kadotto\Kadotto\DataAccess\bin\Debug\DataAccess.dll
 C:\Users\a.tizfahm\Source\Repos\yousefihamid\Kadotto\Kadotto\DataAccess\bin\Debug\DataAccess.pdb
@@ -28,3 +27,4 @@ C:\Users\a.tizfahm\Source\Repos\yousefihamid\Kadotto\Kadotto\DataAccess\bin\Debu
 C:\Users\a.tizfahm\Source\Repos\yousefihamid\Kadotto\Kadotto\DataAccess\obj\Debug\DataAccess.csprojResolveAssemblyReference.cache
 C:\Users\a.tizfahm\Source\Repos\yousefihamid\Kadotto\Kadotto\DataAccess\obj\Debug\DataAccess.dll
 C:\Users\a.tizfahm\Source\Repos\yousefihamid\Kadotto\Kadotto\DataAccess\obj\Debug\DataAccess.pdb
+D:\Mysource\Projects\Kadoto\Kadotto\DataAccess\obj\Debug\DataAccess.csprojResolveAssemblyReference.cache

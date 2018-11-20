@@ -49,6 +49,10 @@
     <Compile Include="Core\ProductDTO.cs" />
     <Compile Include="Core\CustomerDTO.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
+    <Compile Include="Shop\OrderDetailDTO.cs" />
+    <Compile Include="Shop\OrderDTO.cs" />
+    <Compile Include="Shop\PackagedBoxDetailDTO.cs" />
+    <Compile Include="Shop\PackagedBoxDTO.cs" />
     <Compile Include="Utility\DisplayFormat.cs" />
     <Compile Include="Utility\DateTimeConvert.cs" />
   </ItemGroup>

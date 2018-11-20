@@ -103,6 +103,8 @@ namespace Service.Core
                         UpdateDate = a.UpdateDate,
                         DisplayOrder = a.DisplayOrder,
                         Visible = a.Visible,
+                        Price = a.Price,
+                        ImageName = a.ImageName
                     }).ToList();
             }
             return Result;

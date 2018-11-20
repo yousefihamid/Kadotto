@@ -40,6 +40,7 @@
     </Reference>
     <Reference Include="System" />
     <Reference Include="System.ComponentModel.DataAnnotations" />
+    <Reference Include="System.configuration" />
     <Reference Include="System.Core" />
     <Reference Include="System.Web" />
     <Reference Include="System.Xml.Linq" />
@@ -58,6 +59,11 @@
     <Compile Include="Authentication\UserService.cs" />
     <Compile Include="Core\CustomerService.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
+    <Compile Include="Shop\OrderDetailService.cs" />
+    <Compile Include="Shop\PackagedBoxDetailService.cs" />
+    <Compile Include="Shop\OrderService.cs" />
+    <Compile Include="Shop\PackagedBoxService.cs" />
+    <Compile Include="Utility\Statics.cs" />
   </ItemGroup>
   <ItemGroup>
     <ProjectReference Include="..\Common\Common.csproj">

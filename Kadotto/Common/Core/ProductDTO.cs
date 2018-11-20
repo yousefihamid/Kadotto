@@ -18,6 +18,8 @@ namespace Common.Core
         public DateTime UpdateDate { get; set; }
         public int DisplayOrder { get; set; }
         public bool Visible { get; set; }
+        public decimal Price { get; set; }
+        public string ImageName { get; set; }
 
         public string ProductCategoryTitle { get; set; }
         public string CreationDateString { get { return CreationDate.ToString("yyyy-MM-dd"); } set { } }

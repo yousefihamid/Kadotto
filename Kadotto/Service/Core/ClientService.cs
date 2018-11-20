@@ -1,8 +1,10 @@
 ﻿using Common.Core;
 using DataAccess.Context;
 using DataAccess.Model;
+using Service.Utility;
 using System;
 using System.Collections.Generic;
+using System.IO;
 using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
@@ -14,6 +16,12 @@ namespace Service.Core
         public long Add(ClientDTO pClientDTO)
         {
             long ClientID = 0;
+            if (File.Exists(Statics.TempFilePath + pClientDTO.ImageName) == true)
+            {
+                File.Copy(Statics.TempFilePath + pClientDTO.ImageName, Statics.ClientFilePath + pClientDTO.ImageName, true);
+                File.Delete(Statics.TempFilePath + pClientDTO.ImageName);
+            }
+
             using (var Context = new BaseContext())
             {
                 var Client = new ClientModel
@@ -31,6 +39,11 @@ namespace Service.Core
         public long Edit(ClientDTO pClientDTO)
         {
             long ClientID = 0;
+            if (File.Exists(Statics.TempFilePath + pClientDTO.ImageName) == true)
+            {
+                File.Copy(Statics.TempFilePath + pClientDTO.ImageName, Statics.ClientFilePath + pClientDTO.ImageName, true);
+                File.Delete(Statics.TempFilePath + pClientDTO.ImageName);
+            }
             using (var Context = new BaseContext())
             {
                 var Client = Context.Clients.FirstOrDefault(a => a.ID == pClientDTO.ID);

@@ -11,11 +11,14 @@
 
     @Styles.Render("~/assets/css-css")
     @Styles.Render("~/assets/js/plugins-css")
+    @Styles.Render("~/assets/js/Kaadoto/Uploader-css")
 
     @Scripts.Render("~/assets/js/pluginsjs")
     @Scripts.Render("~/assets/js/plugins/revolution/jsjs")
     @Scripts.Render("~/assets/js/plugins/revolution/js/extensionsjs")
     @Scripts.Render("~/assets/jsjs")
+    @Scripts.Render("~/assets/js/Kaadoto/Corejs")
+    @Scripts.Render("~/assets/js/Kaadoto/Uploaderjs")
 
     <link rel="shortcut icon" href="~/Content/Images/favicon.ico" />
     <link href='https://fonts.googleapis.com/css?family=Lato:400,100,300,700,900' rel='stylesheet' type='text/css'>
@@ -56,52 +59,18 @@
 
                 <!-- Cart -->
                 <li class="ws-shop-cart">
-                    <a href="#x" class="btn btn-sm">Cart (2)</a>
+                    <a class="btn btn-sm">Cart <span class="packagedBoxCount">(2)</span></a>
                     <!-- Cart Popover -->
-                    <div class="ws-shop-minicart">
+                    <div class="ws-shop-minicart hidden">
                         <div class="minicart-content">
                             <!-- Added Items -->
                             <ul class="minicart-content-items clearfix">
                                 <!-- Item -->
-                                <li class="media">
-                                    <div class="media-left">
-                                        <!-- Image -->
-                                        <a href="#">
-                                            <img src="~/assets/img/works/abstract/5.jpg" class="media-object" alt="Alternative Text">
-                                        </a>
-                                    </div>
-
-                                    <div class="minicart-content-details media-body">
-                                        <!-- Title -->
-                                        <h3><a href="#">Pinning Moon</a></h3>
-                                        <!-- Price -->
-                                        <span class="minicart-content-price">$25.00</span>
-                                    </div>
-                                    <!-- Remove -->
-                                    <span class="minicart-content-remove"><a href="#"><i class="fa fa-times"></i></a></span>
-                                </li>
-                                <!-- Item -->
-                                <li class="media">
-                                    <div class="media-left">
-                                        <!-- Image -->
-                                        <a href="#">
-                                            <img src="~/assets/img/works/illustrated/4.jpg" class="media-object" alt="Alternative Text">
-                                        </a>
-                                    </div>
-
-                                    <div class="minicart-content-details media-body">
-                                        <!-- Title -->
-                                        <h3><a href="#">Arkose Factor</a></h3>
-                                        <!-- Price -->
-                                        <span class="minicart-content-price">$25.00</span>
-                                    </div>
-                                    <!-- Remove -->
-                                    <span class="minicart-content-remove"><a href="#"><i class="fa fa-times"></i></a></span>
-                                </li>
+                                
                             </ul>
                             <!-- Subtotal -->
                             <div class="minicart-content-total">
-                                <h3>Subtotal: $50.00</h3>
+                                <h3>Subtotal: <span class="packagedBoxTotalPrice">$50.00</span></h3>
                             </div>
                             <!-- Checkout -->
                             <div class="ws-shop-menu-checkout">
@@ -167,7 +136,25 @@
             <a href="#" class="close" data-dismiss="alert" aria-label="close">OK</a>
 
         </div>
+        <ul>
+            <li class="media Cart-item-temp">
+                <div class="media-left">
+                    <!-- Image -->
+                    <a href="#"> 
+                        <img src="@Url.Content("~/UploadedFiles/Box/")" class="media-object packagedBoxImageName" alt="Alternative Text">
+                    </a>
+                </div>
 
+                <div class="minicart-content-details media-body">
+                    <!-- Title -->
+                    <h3><a href="#" class="packagedBoxTitle"></a></h3>
+                    <!-- Price -->
+                    <span class="minicart-content-price packagedBoxPrice"></span>
+                </div>
+                <!-- Remove -->
+                <span class="minicart-content-remove"><a href="#"><i class="fa fa-times"></i></a></span>
+            </li>
+        </ul>
     </div>
     <!-- Kaadoto -->
     @RenderSection("FooterSection")

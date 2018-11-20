@@ -10,12 +10,12 @@ namespace Kadotto
         {
             bundles.Add(new Bundle("~/assets/js/pluginsjs").Include(
                "~/assets/js/plugins/jquery-3.3.1.min.js",
-                   "~/assets/js/plugins/bootstrap.min.js",
-                   "~/assets/js/plugins/modernizr-2.8.3-respond-1.4.2.min.js",
-                   "~/assets/js/plugins/owl-carousel/owl.carousel.min.js",
-                   "~/assets/js/plugins/parallax.min.js",
-                   "~/assets/js/plugins/scrollReveal.min.js",
-                   "~/assets/js/plugins/bootstrap-dropdownhover.min.js"
+                "~/assets/js/plugins/bootstrap.min.js",
+                "~/assets/js/plugins/modernizr-2.8.3-respond-1.4.2.min.js",
+                "~/assets/js/plugins/owl-carousel/owl.carousel.min.js",
+                "~/assets/js/plugins/parallax.min.js",
+                "~/assets/js/plugins/scrollReveal.min.js",
+                "~/assets/js/plugins/bootstrap-dropdownhover.min.js"
             ));
 
             bundles.Add(new Bundle("~/assets/js/plugins/revolution/jsjs").Include(
@@ -40,12 +40,22 @@ namespace Kadotto
             ));
 
             bundles.Add(new Bundle("~/assets/js/Kaadoto/Corejs").Include(
-                "~/assets/js/Kaadoto/Core/Ajax.Models.Service.js",
                 "~/assets/js/Kaadoto/Core/Ajax.Service.js",
+                "~/assets/js/Kaadoto/Core/Ajax.Models.Service.js",
                 "~/assets/js/Kaadoto/Core/Tools.js",
                 "~/assets/js/Kaadoto/Core/utility.js",
-                "~/assets/js/Kaadoto/Core/validator.min.js"
+                "~/assets/js/Kaadoto/Core/validator.min.js",
+                "~/assets/js/Kaadoto/Base/BaseInitializing.js",
+                "~/assets/js/Kaadoto/Shop/Card.js"
                 ));
+
+            bundles.Add(new Bundle("~/assets/js/Kaadoto/Uploaderjs").Include(
+              "~/assets/js/Kaadoto/Uploader/moxie.js",
+              "~/assets/js/Kaadoto/Uploader/plupload.dev.js",
+              "~/assets/js/Kaadoto/Uploader/plupload.js",
+              "~/assets/js/Kaadoto/Uploader/jquery-ui-1.12.1.js",
+              "~/assets/js/Kaadoto/Uploader/jquery.ui.plupload/jquery.ui.plupload.js"
+               ));
         }
     }
 }

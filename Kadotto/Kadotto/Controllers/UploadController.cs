@@ -1,4 +1,5 @@
-﻿using System;
+﻿using Service.Utility;
+using System;
 using System.Collections.Generic;
 using System.IO;
 using System.Linq;
@@ -15,7 +16,7 @@ namespace Kadotto.Controllers
             string Res = "error";
             try
             {
-                string uploadPath = Server.MapPath("~/TempUpload/");
+                string uploadPath = Server.MapPath(Statics.TempFilePath);
                 var fileUpload = Request.Files[0];
 
                 chunk = chunk ?? 0;
@@ -41,7 +42,7 @@ namespace Kadotto.Controllers
         {
             try
             {
-                string fullPath = Request.MapPath("~/TempUpload/" + fileName);
+                string fullPath = Request.MapPath(Statics.TempFilePath + fileName);
 
                 if (System.IO.File.Exists(fullPath))
                 {

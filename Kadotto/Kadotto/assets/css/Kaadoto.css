@@ -1,0 +1,30 @@
+﻿
+
+.policy_alert .alert {
+  position: fixed;
+  background-color: #999;
+  border-color: transparent;
+  color: #fff;
+  bottom: 0;
+  width: 100%;
+  margin: 0;
+  border-radius: 0;
+  z-index: 10000000;
+  -webkit-box-shadow: 0px -1px 5px rgba(0, 0, 0, 0.17);
+  -moz-box-shadow: 0px -1px 5px rgba(0, 0, 0, 0.17);
+  box-shadow: 0px -1px 5px rgba(0, 0, 0, 0.17);
+  padding: 25px 45px 25px 30px;
+}
+.policy_alert .alert .close {
+  opacity: 0.5;
+  color: #fff;
+}
+.policy_alert .alert .close:hover {
+  opacity: 0.8;
+}
+.policy_alert .alert hr {
+  border-top-color: #ededed;
+}
+.policy_alert .alert .alert-link {
+  color: #ffc31d;
+}
