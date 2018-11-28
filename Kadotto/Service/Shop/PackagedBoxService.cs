@@ -1,6 +1,7 @@
 ﻿using DataAccess.Context;
 using DataAccess.Model;
 using DataAccess.Shop;
+using Service.Core;
 using Service.Utility;
 using System.Collections.Generic;
 using System.IO;
@@ -102,18 +103,24 @@ namespace Service.Shop
         public bool AddToCard(PackagedBoxDTO pPackagedBoxDTO)
         {
             bool Result = false;
-            var CardList = (List<PackagedBoxDTO>)System.Web.HttpContext.Current.Session["Card"];
-            if (CardList != null)
+            var Box = new BoxService().GetByID(pPackagedBoxDTO.BoxID);
+            if (Box != null)
             {
-                CardList.Add(pPackagedBoxDTO);
-                Result = true;
-            }
-            else
-            {
-                CardList = new List<PackagedBoxDTO>
+                pPackagedBoxDTO.BoxImageName = Box.ImageName;
+                pPackagedBoxDTO.BoxTitle = Box.Name;
+                var CardList = (List<PackagedBoxDTO>)System.Web.HttpContext.Current.Session["Card"];
+                if (CardList != null)
                 {
-                    pPackagedBoxDTO
-                };
+                    CardList.Add(pPackagedBoxDTO);
+                }
+                else
+                {
+                    CardList = new List<PackagedBoxDTO>
+                    {
+                        pPackagedBoxDTO
+                    };
+                }
+                System.Web.HttpContext.Current.Session["Card"] = CardList;
                 Result = true;
             }
             return Result;
@@ -121,23 +128,48 @@ namespace Service.Shop
 
         public List<PackagedBoxDTO> GetCard()
         {
-            //System.Web.HttpContext.Current.Session["Card"] =
-            //new List<PackagedBoxDTO>
-            //{
-            //    new PackagedBoxDTO
-            //    {
-            //        BoxTitle="Packaged Box 1",
-            //        Price=120000,
-            //        BoxImageName="1.jpg"
-            //    },
-            //    new PackagedBoxDTO
-            //    {
-            //        BoxTitle="Packaged Box 1",
-            //        Price=50000,
-            //        BoxImageName="1.jpg"
-            //    }
-            //};
+            System.Web.HttpContext.Current.Session["Card"] = new List<PackagedBoxDTO>
+            {
+                new PackagedBoxDTO
+                {
+                    BoxTitle="BoxTitle1",
+                    Price=100,
+                    BoxImageName="1.jpg"
+                },
+                 new PackagedBoxDTO
+                {
+                    BoxTitle="BoxTitle2",
+                    Price=200,
+                    BoxImageName="1.jpg"
+                },
+            };
             var Result = (List<PackagedBoxDTO>)System.Web.HttpContext.Current.Session["Card"];
+            return Result;
+        }
+
+        public bool RemoveFromCard(PackagedBoxDTO pPackagedBoxDTO)
+        {
+            bool Result = false;
+            var Box = new BoxService().GetByID(pPackagedBoxDTO.BoxID);
+            if (Box != null)
+            {
+                pPackagedBoxDTO.BoxImageName = Box.ImageName;
+                pPackagedBoxDTO.BoxTitle = Box.Name;
+                var CardList = (List<PackagedBoxDTO>)System.Web.HttpContext.Current.Session["Card"];
+                if (CardList != null)
+                {
+                    CardList.Add(pPackagedBoxDTO);
+                }
+                else
+                {
+                    CardList = new List<PackagedBoxDTO>
+                    {
+                        pPackagedBoxDTO
+                    };
+                }
+                System.Web.HttpContext.Current.Session["Card"] = CardList;
+                Result = true;
+            }
             return Result;
         }
     }

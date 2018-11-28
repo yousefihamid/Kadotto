@@ -22,6 +22,7 @@ namespace Kadotto.Controllers
 
         public ActionResult ShoppingCart()
         {
+            ViewBag.PackagedBoxes = new PackagedBoxService().GetCard();
             return View();
         }
 
@@ -48,6 +49,12 @@ namespace Kadotto.Controllers
             return Json(Result, JsonRequestBehavior.AllowGet);
         }
 
+        [HttpPost]
+        public JsonResult RemoveFromCard(PackagedBoxDTO pPackagedBoxDTO)
+        {
+            var Result = new PackagedBoxService().RemoveFromCard(pPackagedBoxDTO);
+            return Json(Result, JsonRequestBehavior.AllowGet);
+        }
         #endregion
     }
 }

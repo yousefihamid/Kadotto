@@ -2,6 +2,7 @@
     $.Kaadoto = {};
     $.Kaadoto.BaseInitializing = {};
     $.Kaadoto.Card = {};
+
     $.extend($.Kaadoto.BaseInitializing, {
         initializing: function () {
             $.ajax({

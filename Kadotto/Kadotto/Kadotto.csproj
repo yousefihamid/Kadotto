@@ -258,6 +258,7 @@
     <Content Include="assets\js\Kaadoto\Client\ClientList.js" />
     <Content Include="assets\js\Kaadoto\Shop\Card.js" />
     <Content Include="assets\js\Kaadoto\Shop\Shop.js" />
+    <Content Include="assets\js\Kaadoto\Shop\ShoppingCart.js" />
     <Content Include="assets\js\Kaadoto\Uploader\i18n\ar.js" />
     <Content Include="assets\js\Kaadoto\Uploader\i18n\az.js" />
     <Content Include="assets\js\Kaadoto\Uploader\i18n\bg.js" />
